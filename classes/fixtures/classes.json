@@ -1,0 +1,30 @@
+[
+   {
+      "pk":1,
+      "model":"classes.class",
+      "fields":{
+         "sku":"tpa2020001",
+         "name":"Tots Singing",
+         "description":"An introduction to singing for young children",
+         "price":100.00,
+         "category":1,
+         "age":"3-6yrs",
+         "image_url":"http://www.thecpa.ie",
+         "image":"Image1.jpg"
+      }
+   },
+      {
+      "pk":2,
+      "model":"classes.class",
+      "fields":{
+         "sku":"tpa2020002",
+         "name":"Junior Tap",
+         "description":"Tap dance class for junior age group",
+         "price":100.00,
+         "category":2,
+         "age":"7-11yrs",
+         "image_url":"http://www.thecpa.ie",
+         "image":"Image1.jpg"
+      }
+   }
+]

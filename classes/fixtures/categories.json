@@ -1,0 +1,27 @@
+[
+    {
+        "pk": 1, 
+        "model": "classes.category", 
+        "fields": {"name": "singing", "friendly_name": "Singing"}
+    }, 
+    {
+        "pk": 2, 
+        "model": "classes.category", 
+        "fields": {"name": "dancing", "friendly_name": "Dancing"}
+    },     
+    {
+        "pk": 3, 
+        "model": "classes.category", 
+        "fields": {"name": "acting", "friendly_name": "Acting"}
+    }, 
+    {
+        "pk": 4, 
+        "model": "classes.category", 
+        "fields": {"name": "musicaltheatre", "friendly_name": "Musical Theatre"}
+    }, 
+    {
+        "pk": 5, 
+        "model": "classes.category", 
+        "fields": {"name": "instruments", "friendly_name": "Instruments"}
+    }
+]
