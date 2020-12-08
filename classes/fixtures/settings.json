@@ -1,0 +1,17 @@
+[{
+		"pk": 1,
+		"model": "classes.setting",
+		"fields": {
+			"name": "group",
+			"friendly_name": "Group"
+		}
+	},
+	{
+		"pk": 2,
+		"model": "classes.setting",
+		"fields": {
+			"name": "solo",
+			"friendly_name": "Solo"
+		}
+	}
+]

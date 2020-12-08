@@ -14,14 +14,40 @@ class Category(models.Model):
         return self.friendly_name
 
 
+class Setting(models.Model):
+    name = models.CharField(max_length=254)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    def get_friendly_name(self):
+        return self.friendly_name
+
+
+class Day(models.Model):
+    name = models.CharField(max_length=254)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    def get_friendly_name(self):
+        return self.friendly_name
+
+
 class Class(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    age = models.CharField(max_length=254)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
+    age = models.CharField(max_length=254, null=True, blank=True)
+    setting = models.ForeignKey('Setting', null=True, blank=True, on_delete=models.SET_NULL)
+    day = models.ForeignKey('Day', null=True, blank=True, on_delete=models.SET_NULL)
+    time = models.CharField(max_length=254, null=True, blank=True)
+    teacher = models.CharField(max_length=254, null=True, blank=True)
+    term = models.CharField(max_length=254, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):

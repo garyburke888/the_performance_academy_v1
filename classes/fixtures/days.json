@@ -1,0 +1,57 @@
+[{
+		"pk": 1,
+		"model": "classes.day",
+		"fields": {
+			"name": "monday",
+			"friendly_name": "Monday"
+		}
+	},
+	{
+		"pk": 2,
+		"model": "classes.day",
+		"fields": {
+			"name": "tuesday",
+			"friendly_name": "Tuesday"
+		}
+	},
+	{
+		"pk": 3,
+		"model": "classes.day",
+		"fields": {
+			"name": "wednesday",
+			"friendly_name": "Wednesday"
+		}
+	},
+	{
+		"pk": 4,
+		"model": "classes.day",
+		"fields": {
+			"name": "thursday",
+			"friendly_name": "Thursday"
+		}
+	},
+	{
+		"pk": 5,
+		"model": "classes.day",
+		"fields": {
+			"name": "friday",
+			"friendly_name": "Friday"
+		}
+	},
+	{
+		"pk": 6,
+		"model": "classes.day",
+		"fields": {
+			"name": "saturday",
+			"friendly_name": "Saturday"
+		}
+	},
+	{
+		"pk": 7,
+		"model": "classes.day",
+		"fields": {
+			"name": "sunday",
+			"friendly_name": "Sunday"
+		}
+	}
+]
