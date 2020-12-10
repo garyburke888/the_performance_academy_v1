@@ -25,29 +25,37 @@
                     {% for class in classes %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-1">
+
+                                <!-- Card header with class name -->
                                 <div class="card-header">
                                     <p class="mb-0" align="center">{{ class.name }}</p>
                                 </div>
+
+                                <!-- Check for class image -->
                                 {% if class.image %}
-                                <a href="">
+                                <a href="{% url 'class_detail' class.id %}">
                                     <img class="card-img-top img-fluid" src="{{ class.image.url }}" alt="{{ class.name }}">
                                 </a>
                                 {% else %}
-                                <a href="">
+                                <a href="{% url 'class_detail' class.id %}">
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ class.name }}">
                                 </a>
                                 {% endif %}
+
+                                <!-- Class setting & age information -->
                                 <div class="card-body pb-0">
                                     <p class="mb-0">{{ class.setting }} Class for {{ class.age }}</p>
                                 </div>
+
+                                <!-- Card footer with ??? -->
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold">€{{ class.price }} | {{ class.term }}</p>
-                                            {% if class.age %}
-                                                <small class="text-muted"><i class="fas fa-calendar-day mr-1"></i>{{ class.day }}s | <i class="fas fa-clock mr-1"></i>{{ class.time }}</small>
+                                            {% if class.rating %}
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ class.rating }} / 5</small>
                                             {% else %}
-                                                <small class="text-muted">No Age Set</small>
+                                                <small class="text-muted">No Ratings Yet</small>
                                             {% endif %}
                                         </div>
                                     </div>
