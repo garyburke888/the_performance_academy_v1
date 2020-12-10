@@ -2,7 +2,7 @@
 		"pk": 1,
 		"model": "classes.day",
 		"fields": {
-			"name": "monday",
+			"name": "Monday",
 			"friendly_name": "Monday"
 		}
 	},
@@ -10,7 +10,7 @@
 		"pk": 2,
 		"model": "classes.day",
 		"fields": {
-			"name": "tuesday",
+			"name": "Tuesday",
 			"friendly_name": "Tuesday"
 		}
 	},
@@ -18,7 +18,7 @@
 		"pk": 3,
 		"model": "classes.day",
 		"fields": {
-			"name": "wednesday",
+			"name": "Wednesday",
 			"friendly_name": "Wednesday"
 		}
 	},
@@ -26,7 +26,7 @@
 		"pk": 4,
 		"model": "classes.day",
 		"fields": {
-			"name": "thursday",
+			"name": "Thursday",
 			"friendly_name": "Thursday"
 		}
 	},
@@ -34,7 +34,7 @@
 		"pk": 5,
 		"model": "classes.day",
 		"fields": {
-			"name": "friday",
+			"name": "Friday",
 			"friendly_name": "Friday"
 		}
 	},
@@ -42,7 +42,7 @@
 		"pk": 6,
 		"model": "classes.day",
 		"fields": {
-			"name": "saturday",
+			"name": "Saturday",
 			"friendly_name": "Saturday"
 		}
 	},
@@ -50,7 +50,7 @@
 		"pk": 7,
 		"model": "classes.day",
 		"fields": {
-			"name": "sunday",
+			"name": "Sunday",
 			"friendly_name": "Sunday"
 		}
 	}
