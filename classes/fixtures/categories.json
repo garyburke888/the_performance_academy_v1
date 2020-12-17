@@ -1,27 +1,122 @@
 [
     {
-        "pk": 1, 
-        "model": "classes.category", 
-        "fields": {"name": "singing", "friendly_name": "Singing"}
-    }, 
+        "pk": 1,
+        "model": "classes.category",
+        "fields": {
+            "name": "rockpop",
+            "friendly_name": "Rock/Pop"
+        }
+    },
     {
-        "pk": 2, 
-        "model": "classes.category", 
-        "fields": {"name": "dancing", "friendly_name": "Dancing"}
-    },     
+        "pk": 2,
+        "model": "classes.category",
+        "fields": {
+            "name": "operaclassical",
+            "friendly_name": "Opera/Classical"
+        }
+    },
     {
-        "pk": 3, 
-        "model": "classes.category", 
-        "fields": {"name": "acting", "friendly_name": "Acting"}
-    }, 
+        "pk": 3,
+        "model": "classes.category",
+        "fields": {
+            "name": "musicaltheatre",
+            "friendly_name": "Musical Theatre"
+        }
+    },
     {
-        "pk": 4, 
-        "model": "classes.category", 
-        "fields": {"name": "musicaltheatre", "friendly_name": "Musical Theatre"}
-    }, 
+        "pk": 4,
+        "model": "classes.category",
+        "fields": {
+            "name": "ballet",
+            "friendly_name": "Ballet"
+        }
+    },
     {
-        "pk": 5, 
-        "model": "classes.category", 
-        "fields": {"name": "instruments", "friendly_name": "Instruments"}
+        "pk": 5,
+        "model": "classes.category",
+        "fields": {
+            "name": "hiphop",
+            "friendly_name": "Hip Hop"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "classes.category",
+        "fields": {
+            "name": "tap",
+            "friendly_name": "Tap"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "classes.category",
+        "fields": {
+            "name": "ballroom",
+            "friendly_name": "Ballroom"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "classes.category",
+        "fields": {
+            "name": "stage",
+            "friendly_name": "Stage"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "classes.category",
+        "fields": {
+            "name": "screen",
+            "friendly_name": "Screen"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "classes.category",
+        "fields": {
+            "name": "improv",
+            "friendly_name": "Improv"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "classes.category",
+        "fields": {
+            "name": "piano",
+            "friendly_name": "Piano"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "classes.category",
+        "fields": {
+            "name": "guitar",
+            "friendly_name": "Guitar"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "classes.category",
+        "fields": {
+            "name": "bassguitar",
+            "friendly_name": "Bass Guitar"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "classes.category",
+        "fields": {
+            "name": "drums",
+            "friendly_name": "Drums"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "classes.category",
+        "fields": {
+            "name": "ukulele",
+            "friendly_name": "Ukulele"
+        }
     }
 ]
