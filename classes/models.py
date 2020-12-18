@@ -30,6 +30,14 @@ class Setting(models.Model):
         return self.friendly_name
 
 
+class Age(models.Model):
+
+    name = models.CharField(max_length=254)
+
+    def __str__(self):
+        return self.name
+
+
 class Class(models.Model):
 
     class Meta:
@@ -41,7 +49,8 @@ class Class(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    age = models.CharField(max_length=254, null=True, blank=True)
+    age = models.ForeignKey(
+        'Age', null=True, blank=True, on_delete=models.SET_NULL)
     setting = models.ForeignKey(
         'Setting', null=True, blank=True, on_delete=models.SET_NULL)
     teacher = models.CharField(max_length=254, null=True, blank=True)

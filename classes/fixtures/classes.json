@@ -1,674 +1,674 @@
 [
     {
-        "pk": "1",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020001",
-            "name": "Tots Voice",
-            "category": "1",
-            "age": "3-5yrs",
-            "description": "Introduction to singing for young children",
-            "setting": "1",
-            "teacher": "Emma",
-            "price": "80.00",
-            "term": "10 weeks",
-            "image": "tots_voice.jpg"
+        "pk":"1",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020001",
+            "name":"Tots Voice",
+            "category":"1",
+            "age":"1",
+            "description":"Introduction to singing for young children",
+            "setting":"1",
+            "teacher":"Emma",
+            "price":"80.00",
+            "term":"10 weeks",
+            "image":"tots_voice.jpg"
         }
     },
     {
-        "pk": "2",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020002",
-            "name": "Junior Voice",
-            "category": "1",
-            "age": "6-11yrs",
-            "description": "Voice development for primary school children",
-            "setting": "1",
-            "teacher": "Katie",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "junior_voice.jpg"
+        "pk":"2",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020002",
+            "name":"Junior Voice",
+            "category":"1",
+            "age":"4",
+            "description":"Voice development for primary school children",
+            "setting":"1",
+            "teacher":"Katie",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"junior_voice.jpg"
         }
     },
     {
-        "pk": "3",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020003",
-            "name": "Senior Voice",
-            "category": "1",
-            "age": "12-18yrs",
-            "description": "Advanced vocals for secondary school children",
-            "setting": "1",
-            "teacher": "Katie",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "senior_voice.jpg"
+        "pk":"3",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020003",
+            "name":"Senior Voice",
+            "category":"1",
+            "age":"5",
+            "description":"Advanced vocals for secondary school children",
+            "setting":"1",
+            "teacher":"Katie",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"senior_voice.jpg"
         }
     },
     {
-        "pk": "4",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020004",
-            "name": "Adult Voice",
-            "category": "1",
-            "age": "18yrs+",
-            "description": "Voice class for adults",
-            "setting": "1",
-            "teacher": "Katie",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "adult_voice.jpg"
+        "pk":"4",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020004",
+            "name":"Adult Voice",
+            "category":"1",
+            "age":"6",
+            "description":"Voice class for adults",
+            "setting":"1",
+            "teacher":"Katie",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"adult_voice.jpg"
         }
     },
     {
-        "pk": "5",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020005",
-            "name": "Junior Singing Lessons",
-            "category": "1",
-            "age": "6-11yrs",
-            "description": "Learn to sing in the style of your choosing (30min sessions)",
-            "setting": "2",
-            "teacher": "Katie",
-            "price": "300.00",
-            "term": "10 weeks",
-            "image": "rock_pop_vocals_1.jpg"
+        "pk":"5",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020005",
+            "name":"Junior Singing Lessons",
+            "category":"1",
+            "age":"4",
+            "description":"Learn to sing in the style of your choosing (30min sessions)",
+            "setting":"2",
+            "teacher":"Katie",
+            "price":"300.00",
+            "term":"10 weeks",
+            "image":"rock_pop_vocals_1.jpg"
         }
     },
     {
-        "pk": "6",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020006",
-            "name": "Senior Singing Lessons",
-            "category": "1",
-            "age": "12-18yrs",
-            "description": "Learn to sing in the style of your choosing (30min sessions)",
-            "setting": "2",
-            "teacher": "Katie",
-            "price": "300.00",
-            "term": "10 weeks",
-            "image": "rock_pop_vocals_2.jpg"
+        "pk":"6",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020006",
+            "name":"Senior Singing Lessons",
+            "category":"1",
+            "age":"5",
+            "description":"Learn to sing in the style of your choosing (30min sessions)",
+            "setting":"2",
+            "teacher":"Katie",
+            "price":"300.00",
+            "term":"10 weeks",
+            "image":"rock_pop_vocals_2.jpg"
         }
     },
     {
-        "pk": "7",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020007",
-            "name": "Adult Singing Lessons",
-            "category": "1",
-            "age": "18yrs+",
-            "description": "Learn to sing in the style of your choosing (30min sessions)",
-            "setting": "2",
-            "teacher": "Katie",
-            "price": "300.00",
-            "term": "10 weeks",
-            "image": "rock_pop_vocals_3.jpg"
+        "pk":"7",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020007",
+            "name":"Adult Singing Lessons",
+            "category":"1",
+            "age":"6",
+            "description":"Learn to sing in the style of your choosing (30min sessions)",
+            "setting":"2",
+            "teacher":"Katie",
+            "price":"300.00",
+            "term":"10 weeks",
+            "image":"rock_pop_vocals_3.jpg"
         }
     },
     {
-        "pk": "8",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020008",
-            "name": "Junior Voice Training",
-            "category": "2",
-            "age": "6-11yrs",
-            "description": "Classical voice training (30min sessions)",
-            "setting": "2",
-            "teacher": "Katie",
-            "price": "300.00",
-            "term": "10 weeks",
-            "image": "opera_classical_vocals_1.jpg"
+        "pk":"8",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020008",
+            "name":"Junior Voice Training",
+            "category":"2",
+            "age":"4",
+            "description":"Classical voice training (30min sessions)",
+            "setting":"2",
+            "teacher":"Katie",
+            "price":"300.00",
+            "term":"10 weeks",
+            "image":"opera_classical_vocals_1.jpg"
         }
     },
     {
-        "pk": "9",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020009",
-            "name": "Senior Voice Training",
-            "category": "2",
-            "age": "12-18yrs",
-            "description": "Classical voice training (30min sessions)",
-            "setting": "2",
-            "teacher": "Katie",
-            "price": "300.00",
-            "term": "10 weeks",
-            "image": "opera_classical_vocals_2.jpg"
+        "pk":"9",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020009",
+            "name":"Senior Voice Training",
+            "category":"2",
+            "age":"5",
+            "description":"Classical voice training (30min sessions)",
+            "setting":"2",
+            "teacher":"Katie",
+            "price":"300.00",
+            "term":"10 weeks",
+            "image":"opera_classical_vocals_2.jpg"
         }
     },
     {
-        "pk": "10",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020010",
-            "name": "Adult Voice Training",
-            "category": "2",
-            "age": "18yrs+",
-            "description": "Classical voice training (30min sessions)",
-            "setting": "2",
-            "teacher": "Katie",
-            "price": "300.00",
-            "term": "10 weeks",
-            "image": "opera_classical_vocals_3.jpg"
+        "pk":"10",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020010",
+            "name":"Adult Voice Training",
+            "category":"2",
+            "age":"6",
+            "description":"Classical voice training (30min sessions)",
+            "setting":"2",
+            "teacher":"Katie",
+            "price":"300.00",
+            "term":"10 weeks",
+            "image":"opera_classical_vocals_3.jpg"
         }
     },
     {
-        "pk": "11",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020011",
-            "name": "Junior Musical Theatre",
-            "category": "3",
-            "age": "6-11yrs",
-            "description": "Song, Dance & Drama for primary school children",
-            "setting": "1",
-            "teacher": "Emma",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "junior_musical_theatre.jpg"
+        "pk":"11",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020011",
+            "name":"Junior Musical Theatre",
+            "category":"3",
+            "age":"4",
+            "description":"Song, Dance & Drama for primary school children",
+            "setting":"1",
+            "teacher":"Emma",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"junior_musical_theatre.jpg"
         }
     },
     {
-        "pk": "12",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020012",
-            "name": "Senior Musical Theatre",
-            "category": "3",
-            "age": "12-18yrs",
-            "description": "Song, Dance & Drama for secondary school children",
-            "setting": "1",
-            "teacher": "Emma",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "senior_musical_theatre.jpg"
+        "pk":"12",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020012",
+            "name":"Senior Musical Theatre",
+            "category":"3",
+            "age":"5",
+            "description":"Song, Dance & Drama for secondary school children",
+            "setting":"1",
+            "teacher":"Emma",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"senior_musical_theatre.jpg"
         }
     },
     {
-        "pk": "13",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020013",
-            "name": "Adult Musical Theatre",
-            "category": "3",
-            "age": "18yrs+",
-            "description": "Song, Dance & Drama for adults",
-            "setting": "1",
-            "teacher": "Emma",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "adult_musical_theatre.jpg"
+        "pk":"13",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020013",
+            "name":"Adult Musical Theatre",
+            "category":"3",
+            "age":"6",
+            "description":"Song, Dance & Drama for adults",
+            "setting":"1",
+            "teacher":"Emma",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"adult_musical_theatre.jpg"
         }
     },
     {
-        "pk": "14",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020014",
-            "name": "Primary Ballet",
-            "category": "4",
-            "age": "3-5yrs",
-            "description": "ISTD ballet examination class",
-            "setting": "1",
-            "teacher": "Hannah",
-            "price": "120.00",
-            "term": "10 weeks",
-            "image": "primary_ballet.jpg"
+        "pk":"14",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020014",
+            "name":"Primary Ballet",
+            "category":"4",
+            "age":"4",
+            "description":"ISTD ballet examination class",
+            "setting":"1",
+            "teacher":"Hannah",
+            "price":"120.00",
+            "term":"10 weeks",
+            "image":"primary_ballet.jpg"
         }
     },
     {
-        "pk": "15",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020015",
-            "name": "Grade 1 Ballet",
-            "category": "4",
-            "age": "6-8yrs",
-            "description": "ISTD ballet examination class",
-            "setting": "1",
-            "teacher": "Hannah",
-            "price": "120.00",
-            "term": "10 weeks",
-            "image": "ballet_grade_1.jpg"
+        "pk":"15",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020015",
+            "name":"Grade 1 Ballet",
+            "category":"4",
+            "age":"4",
+            "description":"ISTD ballet examination class",
+            "setting":"1",
+            "teacher":"Hannah",
+            "price":"120.00",
+            "term":"10 weeks",
+            "image":"ballet_grade_1.jpg"
         }
     },
     {
-        "pk": "16",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020016",
-            "name": "Grade 2 Ballet",
-            "category": "4",
-            "age": "9-11yrs",
-            "description": "ISTD ballet examination class",
-            "setting": "1",
-            "teacher": "Hannah",
-            "price": "120.00",
-            "term": "10 weeks",
-            "image": "ballet_grade_2.jpg"
+        "pk":"16",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020016",
+            "name":"Grade 2 Ballet",
+            "category":"4",
+            "age":"4",
+            "description":"ISTD ballet examination class",
+            "setting":"1",
+            "teacher":"Hannah",
+            "price":"120.00",
+            "term":"10 weeks",
+            "image":"ballet_grade_2.jpg"
         }
     },
     {
-        "pk": "17",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020017",
-            "name": "Grade 3 Ballet",
-            "category": "4",
-            "age": "12yrs+",
-            "description": "ISTD ballet examination class",
-            "setting": "1",
-            "teacher": "Hannah",
-            "price": "120.00",
-            "term": "10 weeks",
-            "image": "ballet_grade_3.jpg"
+        "pk":"17",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020017",
+            "name":"Grade 3 Ballet",
+            "category":"4",
+            "age":"5",
+            "description":"ISTD ballet examination class",
+            "setting":"1",
+            "teacher":"Hannah",
+            "price":"120.00",
+            "term":"10 weeks",
+            "image":"ballet_grade_3.jpg"
         }
     },
     {
-        "pk": "18",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020018",
-            "name": "Grade 4 Ballet",
-            "category": "4",
-            "age": "12yrs+",
-            "description": "ISTD ballet examination class",
-            "setting": "1",
-            "teacher": "Hannah",
-            "price": "120.00",
-            "term": "10 weeks",
-            "image": "ballet_grade_4.jpg"
+        "pk":"18",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020018",
+            "name":"Grade 4 Ballet",
+            "category":"4",
+            "age":"5",
+            "description":"ISTD ballet examination class",
+            "setting":"1",
+            "teacher":"Hannah",
+            "price":"120.00",
+            "term":"10 weeks",
+            "image":"ballet_grade_4.jpg"
         }
     },
     {
-        "pk": "19",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020019",
-            "name": "Grade 5 Ballet",
-            "category": "4",
-            "age": "12yrs+",
-            "description": "ISTD ballet examination class",
-            "setting": "1",
-            "teacher": "Hannah",
-            "price": "120.00",
-            "term": "10 weeks",
-            "image": "ballet_grade_5.jpg"
+        "pk":"19",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020019",
+            "name":"Grade 5 Ballet",
+            "category":"4",
+            "age":"5",
+            "description":"ISTD ballet examination class",
+            "setting":"1",
+            "teacher":"Hannah",
+            "price":"120.00",
+            "term":"10 weeks",
+            "image":"ballet_grade_5.jpg"
         }
     },
     {
-        "pk": "20",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020020",
-            "name": "Grade 6 Ballet",
-            "category": "4",
-            "age": "12yrs+",
-            "description": "ISTD ballet examination class",
-            "setting": "1",
-            "teacher": "Hannah",
-            "price": "120.00",
-            "term": "10 weeks",
-            "image": "ballet_grade_6.jpg"
+        "pk":"20",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020020",
+            "name":"Grade 6 Ballet",
+            "category":"4",
+            "age":"5",
+            "description":"ISTD ballet examination class",
+            "setting":"1",
+            "teacher":"Hannah",
+            "price":"120.00",
+            "term":"10 weeks",
+            "image":"ballet_grade_6.jpg"
         }
     },
     {
-        "pk": "21",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020021",
-            "name": "Adult Ballet",
-            "category": "4",
-            "age": "18yrs+",
-            "description": "Ballet class for adults, beginners welcome",
-            "setting": "1",
-            "teacher": "Hannah",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "adult_ballet.jpg"
+        "pk":"21",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020021",
+            "name":"Adult Ballet",
+            "category":"4",
+            "age":"6",
+            "description":"Ballet class for adults, beginners welcome",
+            "setting":"1",
+            "teacher":"Hannah",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"adult_ballet.jpg"
         }
     },
     {
-        "pk": "22",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020022",
-            "name": "Junior Hip Hop",
-            "category": "5",
-            "age": "6-11yrs",
-            "description": "Fun and energetic class for primary school children",
-            "setting": "1",
-            "teacher": "Jimmy",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "junior_hip_hop.jpg"
+        "pk":"22",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020022",
+            "name":"Junior Hip Hop",
+            "category":"5",
+            "age":"4",
+            "description":"Fun and energetic class for primary school children",
+            "setting":"1",
+            "teacher":"Jimmy",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"junior_hip_hop.jpg"
         }
     },
     {
-        "pk": "23",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020023",
-            "name": "Senior Hip Hop",
-            "category": "5",
-            "age": "12-18yrs",
-            "description": "Fun and energetic class for secondary school children",
-            "setting": "1",
-            "teacher": "Jimmy",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "senior_hip_hop.jpg"
+        "pk":"23",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020023",
+            "name":"Senior Hip Hop",
+            "category":"5",
+            "age":"5",
+            "description":"Fun and energetic class for secondary school children",
+            "setting":"1",
+            "teacher":"Jimmy",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"senior_hip_hop.jpg"
         }
     },
     {
-        "pk": "24",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020024",
-            "name": "Adult Hip Hop",
-            "category": "5",
-            "age": "18yrs+",
-            "description": "Fun and energetic class for adults",
-            "setting": "1",
-            "teacher": "Jimmy",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "adult_hip_hop.jpg"
+        "pk":"24",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020024",
+            "name":"Adult Hip Hop",
+            "category":"5",
+            "age":"6",
+            "description":"Fun and energetic class for adults",
+            "setting":"1",
+            "teacher":"Jimmy",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"adult_hip_hop.jpg"
         }
     },
     {
-        "pk": "25",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020025",
-            "name": "Junior Tap",
-            "category": "6",
-            "age": "6-11yrs",
-            "description": "Tap dance for primary school children",
-            "setting": "1",
-            "teacher": "Sarah",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "junior_tap.jpg"
+        "pk":"25",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020025",
+            "name":"Junior Tap",
+            "category":"6",
+            "age":"4",
+            "description":"Tap dance for primary school children",
+            "setting":"1",
+            "teacher":"Sarah",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"junior_tap.jpg"
         }
     },
     {
-        "pk": "26",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020026",
-            "name": "Senior Tap",
-            "category": "6",
-            "age": "12-18yrs",
-            "description": "Tap dance for secondary school children",
-            "setting": "1",
-            "teacher": "Sarah",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "senior_tap.jpg"
+        "pk":"26",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020026",
+            "name":"Senior Tap",
+            "category":"6",
+            "age":"5",
+            "description":"Tap dance for secondary school children",
+            "setting":"1",
+            "teacher":"Sarah",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"senior_tap.jpg"
         }
     },
     {
-        "pk": "27",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020027",
-            "name": "Adult Tap",
-            "category": "6",
-            "age": "18yrs+",
-            "description": "Tap dance for adults, beginners welcome",
-            "setting": "1",
-            "teacher": "Sarah",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "adult_tap.jpg"
+        "pk":"27",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020027",
+            "name":"Adult Tap",
+            "category":"6",
+            "age":"6",
+            "description":"Tap dance for adults, beginners welcome",
+            "setting":"1",
+            "teacher":"Sarah",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"adult_tap.jpg"
         }
     },
     {
-        "pk": "28",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020028",
-            "name": "Ballroom Dancing",
-            "category": "7",
-            "age": "18yrs+",
-            "description": "Waltz, Tango, Foxtrot, Cha-Cha, Rhumba & more...",
-            "setting": "1",
-            "teacher": "Keith & Tina",
-            "price": "150.00",
-            "term": "10 weeks",
-            "image": "ballroom_dance.jpg"
+        "pk":"28",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020028",
+            "name":"Ballroom Dancing",
+            "category":"7",
+            "age":"6",
+            "description":"Waltz, Tango, Foxtrot, Cha-Cha, Rhumba & more...",
+            "setting":"1",
+            "teacher":"Keith & Tina",
+            "price":"150.00",
+            "term":"10 weeks",
+            "image":"ballroom_dance.jpg"
         }
     },
     {
-        "pk": "29",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020029",
-            "name": "Junior Stage",
-            "category": "8",
-            "age": "6-11yrs",
-            "description": "Acting for the stage, primary school children",
-            "setting": "1",
-            "teacher": "PJ",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "junior_stage_acting.jpg"
+        "pk":"29",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020029",
+            "name":"Junior Stage",
+            "category":"8",
+            "age":"4",
+            "description":"Acting for the stage, primary school children",
+            "setting":"1",
+            "teacher":"PJ",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"junior_stage_acting.jpg"
         }
     },
     {
-        "pk": "30",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020030",
-            "name": "Senior Stage",
-            "category": "8",
-            "age": "12-18yrs",
-            "description": "Acting for the stage, secondary school children",
-            "setting": "1",
-            "teacher": "PJ",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "senior_stage_acting.jpg"
+        "pk":"30",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020030",
+            "name":"Senior Stage",
+            "category":"8",
+            "age":"5",
+            "description":"Acting for the stage, secondary school children",
+            "setting":"1",
+            "teacher":"PJ",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"senior_stage_acting.jpg"
         }
     },
     {
-        "pk": "31",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020031",
-            "name": "Adult Stage",
-            "category": "8",
-            "age": "18yrs+",
-            "description": "Acting for the stage, adults",
-            "setting": "1",
-            "teacher": "PJ",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "adult_stage_acting.jpg"
+        "pk":"31",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020031",
+            "name":"Adult Stage",
+            "category":"8",
+            "age":"6",
+            "description":"Acting for the stage, adults",
+            "setting":"1",
+            "teacher":"PJ",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"adult_stage_acting.jpg"
         }
     },
     {
-        "pk": "32",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020032",
-            "name": "Junior Screen Acting",
-            "category": "9",
-            "age": "6-11yrs",
-            "description": "Acting for the screen, primary school children",
-            "setting": "1",
-            "teacher": "Mary",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "junior_screen_acting.jpg"
+        "pk":"32",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020032",
+            "name":"Junior Screen Acting",
+            "category":"9",
+            "age":"4",
+            "description":"Acting for the screen, primary school children",
+            "setting":"1",
+            "teacher":"Mary",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"junior_screen_acting.jpg"
         }
     },
     {
-        "pk": "33",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020033",
-            "name": "Senior Screen Acting",
-            "category": "9",
-            "age": "12-18yrs",
-            "description": "Acting for the screen, secondary school children",
-            "setting": "1",
-            "teacher": "Mary",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "senior_screen_acting.jpg"
+        "pk":"33",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020033",
+            "name":"Senior Screen Acting",
+            "category":"9",
+            "age":"5",
+            "description":"Acting for the screen, secondary school children",
+            "setting":"1",
+            "teacher":"Mary",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"senior_screen_acting.jpg"
         }
     },
     {
-        "pk": "34",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020034",
-            "name": "Adult Screen Acting",
-            "category": "9",
-            "age": "18yrs+",
-            "description": "Acting for the screen, adults",
-            "setting": "1",
-            "teacher": "Mary",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "adult_screen_acting.jpg"
+        "pk":"34",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020034",
+            "name":"Adult Screen Acting",
+            "category":"9",
+            "age":"6",
+            "description":"Acting for the screen, adults",
+            "setting":"1",
+            "teacher":"Mary",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"adult_screen_acting.jpg"
         }
     },
     {
-        "pk": "35",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020035",
-            "name": "Junior Improv",
-            "category": "10",
-            "age": "6-11yrs",
-            "description": "Improvisation for primary school children",
-            "setting": "1",
-            "teacher": "PJ",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "junior_improv.jpg"
+        "pk":"35",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020035",
+            "name":"Junior Improv",
+            "category":"10",
+            "age":"4",
+            "description":"Improvisation for primary school children",
+            "setting":"1",
+            "teacher":"PJ",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"junior_improv.jpg"
         }
     },
     {
-        "pk": "36",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020036",
-            "name": "Senior Improv",
-            "category": "10",
-            "age": "12-18yrs",
-            "description": "Improvisation for secondary school children",
-            "setting": "1",
-            "teacher": "PJ",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "senior_improv.jpg"
+        "pk":"36",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020036",
+            "name":"Senior Improv",
+            "category":"10",
+            "age":"5",
+            "description":"Improvisation for secondary school children",
+            "setting":"1",
+            "teacher":"PJ",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"senior_improv.jpg"
         }
     },
     {
-        "pk": "37",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020037",
-            "name": "Adult Improv",
-            "category": "10",
-            "age": "18yrs+",
-            "description": "Improvisation for adults",
-            "setting": "1",
-            "teacher": "PJ",
-            "price": "100.00",
-            "term": "10 weeks",
-            "image": "adult_improv.jpg"
+        "pk":"37",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020037",
+            "name":"Adult Improv",
+            "category":"10",
+            "age":"6",
+            "description":"Improvisation for adults",
+            "setting":"1",
+            "teacher":"PJ",
+            "price":"100.00",
+            "term":"10 weeks",
+            "image":"adult_improv.jpg"
         }
     },
     {
-        "pk": "38",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020038",
-            "name": "Piano Lessons",
-            "category": "11",
-            "age": "6yrs+",
-            "description": "Piano lessons for all ages, exams if requested (30min sessions)",
-            "setting": "2",
-            "teacher": "Gordon",
-            "price": "300.00",
-            "term": "10 weeks",
-            "image": "piano.jpg"
+        "pk":"38",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020038",
+            "name":"Piano Lessons",
+            "category":"11",
+            "age":"3",
+            "description":"Piano lessons for all ages, exams if requested (30min sessions)",
+            "setting":"2",
+            "teacher":"Gordon",
+            "price":"300.00",
+            "term":"10 weeks",
+            "image":"piano.jpg"
         }
     },
     {
-        "pk": "39",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020039",
-            "name": "Guitar Lessons",
-            "category": "12",
-            "age": "6yrs+",
-            "description": "Guitar lessons for all ages & styles (30min sessions)",
-            "setting": "2",
-            "teacher": "Gary",
-            "price": "300.00",
-            "term": "10 weeks",
-            "image": "guitar.jpg"
+        "pk":"39",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020039",
+            "name":"Guitar Lessons",
+            "category":"12",
+            "age":"3",
+            "description":"Guitar lessons for all ages & styles (30min sessions)",
+            "setting":"2",
+            "teacher":"Gary",
+            "price":"300.00",
+            "term":"10 weeks",
+            "image":"guitar.jpg"
         }
     },
     {
-        "pk": "40",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020040",
-            "name": "Bass Guitar Lessons",
-            "category": "13",
-            "age": "6yrs+",
-            "description": "Bass guitar lessons for all ages (30min sessions)",
-            "setting": "2",
-            "teacher": "Sharon",
-            "price": "300.00",
-            "term": "10 weeks",
-            "image": "bass.jpg"
+        "pk":"40",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020040",
+            "name":"Bass Guitar Lessons",
+            "category":"13",
+            "age":"3",
+            "description":"Bass guitar lessons for all ages (30min sessions)",
+            "setting":"2",
+            "teacher":"Sharon",
+            "price":"300.00",
+            "term":"10 weeks",
+            "image":"bass.jpg"
         }
     },
     {
-        "pk": "41",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020041",
-            "name": "Drum Lessons",
-            "category": "14",
-            "age": "6yrs+",
-            "description": "Drum lessons for all ages & styles (30min sessions)",
-            "setting": "2",
-            "teacher": "Sam",
-            "price": "300.00",
-            "term": "10 weeks",
-            "image": "drums.jpg"
+        "pk":"41",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020041",
+            "name":"Drum Lessons",
+            "category":"14",
+            "age":"3",
+            "description":"Drum lessons for all ages & styles (30min sessions)",
+            "setting":"2",
+            "teacher":"Sam",
+            "price":"300.00",
+            "term":"10 weeks",
+            "image":"drums.jpg"
         }
     },
     {
-        "pk": "42",
-        "model": "classes.class",
-        "fields": {
-            "sku": "tpa2020042",
-            "name": "Ukulele Lessons",
-            "category": "15",
-            "age": "4yrs+",
-            "description": "Ukulele lessons for all ages (30min sessions)",
-            "setting": "2",
-            "teacher": "Sonny",
-            "price": "300.00",
-            "term": "10 weeks",
-            "image": "ukulele.jpg"
+        "pk":"42",
+        "model":"classes.class",
+        "fields":{
+            "sku":"tpa2020042",
+            "name":"Ukulele Lessons",
+            "category":"15",
+            "age":"2",
+            "description":"Ukulele lessons for all ages (30min sessions)",
+            "setting":"2",
+            "teacher":"Sonny",
+            "price":"300.00",
+            "term":"10 weeks",
+            "image":"ukulele.jpg"
         }
     }
 ]

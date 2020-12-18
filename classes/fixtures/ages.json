@@ -1,0 +1,44 @@
+[
+    {
+        "pk": 1,
+        "model": "classes.age",
+        "fields": {
+            "name": "3-5yrs"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "classes.age",
+        "fields": {
+            "name": "4yrs+"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "classes.age",
+        "fields": {
+            "name": "6yrs+"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "classes.age",
+        "fields": {
+            "name": "6-11yrs"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "classes.age",
+        "fields": {
+            "name": "12-18yrs"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "classes.age",
+        "fields": {
+            "name": "18yrs+"
+        }
+    }
+]

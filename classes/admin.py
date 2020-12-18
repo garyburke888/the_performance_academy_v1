@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Class, Category, Setting
+from .models import Class, Category, Setting, Age
 
 # Register your models here.
 
@@ -33,6 +33,13 @@ class SettingAdmin(admin.ModelAdmin):
     )
 
 
+class AgeAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+    )
+
+
 admin.site.register(Class, ClassAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Setting, SettingAdmin)
+admin.site.register(Age, AgeAdmin)
