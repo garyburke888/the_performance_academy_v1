@@ -72,6 +72,11 @@ body {
 	z-index: -1;
 }
 
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
 /* Class image overlay fade */
 
 .ci-container {
@@ -162,7 +167,6 @@ footer {
 
 footer a {
   color: #fff;
-  font-size: 14px;
   transition-duration: 0.2s;
 }
 

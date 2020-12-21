@@ -5,9 +5,8 @@
                 All Classes
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-classes-link">
-                <a href="{% url 'classes' %}?sort=age" class="dropdown-item">By Age</a>
+                <a href="{% url 'classes' %}?sort=age&direction=asc" class="dropdown-item">By Age</a>
                 <a href="{% url 'classes' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'classes' %}?sort=teacher&direction=asc" class="dropdown-item">By Teacher</a>
                 <a href="{% url 'classes' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
                 <a href="{% url 'classes' %}" class="dropdown-item">All Classes</a>
             </div>
@@ -59,10 +58,10 @@
             <div class="dropdown-menu border-0" aria-labelledby="adult-link">
                 <a href="{% url 'classes' %}?category=piano" class="dropdown-item">Piano</a>
                 <a href="{% url 'classes' %}?category=guitar" class="dropdown-item">Guitar</a>
-                <a href="{% url 'classes' %}?category=bass" class="dropdown-item">Bass</a>
+                <a href="{% url 'classes' %}?category=bassguitar" class="dropdown-item">Bass</a>
                 <a href="{% url 'classes' %}?category=drums" class="dropdown-item">Drums</a>
                 <a href="{% url 'classes' %}?category=ukulele" class="dropdown-item">Ukulele</a>
-                <a href="{% url 'classes' %}?category=piano,guitar,bass,drums,ukulele" class="dropdown-item">All Instruments</a>
+                <a href="{% url 'classes' %}?category=piano,guitar,bassguitar,drums,ukulele" class="dropdown-item">All Instruments</a>
             </div>
         </li>
 
