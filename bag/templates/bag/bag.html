@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">Shopping Bag</h2>
+                <h2 class="logo-font mb-4">Bookings</h2>
                 <hr>
             </div>
         </div>
@@ -25,12 +25,12 @@
                 {% if bag_items %}
                     <div class="table-responsive rounded"></div>
                 {% else %}
-                    <p class="lead mb-5">Your basket is empty.</p>
+                    <p class="lead mb-5">You have no bookings.</p>
                     <a href="{% url 'classes' %}" class="btn btn-outline-black rounded-0 btn-lg">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
-                        <span class="text-uppercase">Keep Looking</span>
+                        <span class="text-uppercase">Look again</span>
                     </a>
                 {% endif %}
             </div>
