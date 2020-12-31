@@ -47,9 +47,6 @@
                                         {% if item.class.is_weekdays %}
                                         <p class="my-0"><strong>Preferred Day: </strong>{{ item.day|upper }}</p>
                                         {% endif %}
-                                        {% if item.class.is_saturdays %}
-                                        <p class="my-0"><strong>Preferred Time: </strong>{{ item.time|upper }}</p>
-                                        {% endif %}
                                         <p class="my-0 small text-muted">SKU: {{ item.class.sku|upper }}</p>
                                     </td>
                                     <td class="py-3">
