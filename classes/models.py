@@ -49,7 +49,6 @@ class Class(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     is_weekdays = models.BooleanField(default=False, null=True, blank=True)
-    is_saturdays = models.BooleanField(default=False, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     age = models.ForeignKey(
         'Age', null=True, blank=True, on_delete=models.SET_NULL)
