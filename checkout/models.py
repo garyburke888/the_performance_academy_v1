@@ -37,7 +37,7 @@ class Order(models.Model):
         Update grand total each time a line item is added,
         accounting for delivery costs.
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         if self.lineitems.count() >= settings.DISCOUNT_THRESHOLD:
             self.discount = self.order_total * Decimal(settings.STANDARD_DISCOUNT_PERCENTAGE / 100)
         else:
@@ -70,8 +70,8 @@ class OrderLineItem(models.Model):
         Override the original save method to set the lineitem total
         and update the order total.
         """
-        self.lineitem_total = self.product.price * self.quantity
+        self.lineitem_total = self.class_name.price * self.quantity
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'SKU {self.a_class.sku} on order {self.order.order_number}'
+        return f'SKU {self.class_name.sku} on order {self.order.order_number}'
