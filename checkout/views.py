@@ -50,7 +50,7 @@ def checkout(request):
                                 order=order,
                                 class_name=a_class,
                                 quantity=quantity,
-                                day=day,
+                                class_day=day,
                             )
                             order_line_item.save()
                 except Class.DoesNotExist:
