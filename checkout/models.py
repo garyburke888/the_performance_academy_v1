@@ -38,11 +38,11 @@ class Order(models.Model):
         accounting for delivery costs.
         """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
-        if self.lineitems.count() >= settings.DISCOUNT_THRESHOLD:
-            self.discount = self.order_total * Decimal(settings.STANDARD_DISCOUNT_PERCENTAGE / 100)
+        if int(self.order_total) >= settings.DISCOUNT_THRESHOLD:
+            self.discount = float(self.order_total) * (settings.STANDARD_DISCOUNT_PERCENTAGE / 100)
         else:
             self.discount = 0
-        self.grand_total = self.order_total - self.discount
+        self.grand_total = self.order_total - int(self.discount)
         self.save()
 
     def save(self, *args, **kwargs):
