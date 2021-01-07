@@ -4,6 +4,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Class, Category
+from .forms import ClassForm
 
 # Create your views here.
 
@@ -71,3 +72,14 @@ def class_detail(request, class_id):
     }
 
     return render(request, 'classes/class_detail.html', context)
+
+
+def add_class(request):
+    """ Add a class to the store """
+    form = ClassForm()
+    template = 'classes/add_class.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
