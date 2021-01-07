@@ -79,9 +79,9 @@ def add_class(request):
     if request.method == 'POST':
         form = ClassForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            a_class = form.save()
             messages.success(request, 'Successfully added class!')
-            return redirect(reverse('add_class'))
+            return redirect(reverse('class_detail', args=[a_class.id]))
         else:
             messages.error(request, 'Failed to add class. Please ensure the form is valid.')
     else:
@@ -117,3 +117,12 @@ def edit_class(request, class_id):
     }
 
     return render(request, template, context)
+
+
+def delete_class(request, class_id):
+    """ Delete a class from the store """
+    a_class = get_object_or_404(Class, pk=class_id)
+    a_class.delete()
+    messages.success(request, 'Class deleted!')
+    return redirect(reverse('classes'))
+
