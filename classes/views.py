@@ -76,7 +76,17 @@ def class_detail(request, class_id):
 
 def add_class(request):
     """ Add a class to the store """
-    form = ClassForm()
+    if request.method == 'POST':
+        form = ClassForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added class!')
+            return redirect(reverse('add_class'))
+        else:
+            messages.error(request, 'Failed to add class. Please ensure the form is valid.')
+    else:
+        form = ClassForm()
+
     template = 'classes/add_class.html'
     context = {
         'form': form,
