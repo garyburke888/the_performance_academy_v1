@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -74,8 +75,13 @@ def class_detail(request, class_id):
     return render(request, 'classes/class_detail.html', context)
 
 
+@login_required
 def add_class(request):
     """ Add a class to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = ClassForm(request.POST, request.FILES)
         if form.is_valid():
@@ -95,8 +101,13 @@ def add_class(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_class(request, class_id):
     """ Edit a class in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     a_class = get_object_or_404(Class, pk=class_id)
     if request.method == 'POST':
         form = ClassForm(request.POST, request.FILES, instance=a_class)
@@ -119,8 +130,13 @@ def edit_class(request, class_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_class(request, class_id):
     """ Delete a class from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     a_class = get_object_or_404(Class, pk=class_id)
     a_class.delete()
     messages.success(request, 'Class deleted!')
