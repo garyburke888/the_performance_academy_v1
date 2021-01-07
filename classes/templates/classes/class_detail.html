@@ -75,6 +75,12 @@
                             <i class="fas fa-star mr-1"></i>No Ratings Yet
                         </small>
                     {% endif %}
+                    {% if request.user.is_superuser %}
+                        <small class="ml-3">
+                            <a href="{% url 'edit_class' class.id %}">Edit</a> | 
+                            <a class="text-danger" href="{% url 'delete_class' class.id %}">Delete</a>
+                        </small>
+                    {% endif %}
                     <hr>
 
                     <form class="form" action="{% url 'add_to_bag' class.id %}" method="POST">
