@@ -5,9 +5,17 @@ html {
 body {
     background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
-    color: #555;
+    color: #000;
     font-family: 'Roboto';
+}
+
+.bg-black {
+    background: #000;
+}
+
+hr {
+    width: 80%;
+    background-color: #fff;
 }
 
 /* from Bulma */
@@ -28,9 +36,13 @@ body {
 }
 
 .shop-now-button {
-    background: white;
+    background: #ffffff;
     color: black;
     min-width: 260px;
+}
+
+.bottom-fix {
+    bottom: 0px
 }
 
 .btn-black {
@@ -70,9 +82,7 @@ body {
 }
 
 .bg-purple {
-    background: #16222A;
-    background: -webkit-linear-gradient(59deg, #3A6073, #16222A);
-    background: linear-gradient(59deg, #3A6073, #16222A);
+    background: #8b0000CC;
 }
 
 .overlay {
@@ -222,12 +232,12 @@ input[name='q']::placeholder {
 
 /* -------------------------------- Media Queries */
 
-/* Slightly larger container on xl screens */
+/* Slightly larger container on xl screens 
 @media (min-width: 1200px) {
   .container {
     max-width: 80%;
   }
-}
+} */
 
 /* Allauth form formatting */
 
@@ -311,7 +321,7 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-/* fixed top navbar only on medium and up */
+/* fixed top navbar only on medium and up 
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -324,9 +334,9 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 220px;
     }
-}
+} */
 
-/* pad the top a bit when navbar is collapsed on mobile */
+/* pad the top a bit when navbar is collapsed on mobile 
 @media (max-width: 991px) {
     .header-container {
         padding-top: 170px;
@@ -335,7 +345,7 @@ input[name='q']::placeholder {
     body {
         height: calc(100vh - 116px);
     }
-}
+} */
 
 /* Footer */
 
