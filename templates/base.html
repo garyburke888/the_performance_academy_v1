@@ -41,160 +41,47 @@
  <body>
 
     <!-- Header -->
-    <header class="container-fluid bg-black">
-        <div id="topnav" class="row pt-lg-2 d-lg-flex">
+    <header class="container-fluid fixed-top bg-black">
+        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
             
             <!-- Logo -->
-            <div class="col-12 my-auto py-1 py-lg-0">
-                <a href="{% url 'home' %}" class="main-logo-link" style="text-decoration: none;">
-                    <h2 class="logo-font text-white text-center my-0"><strong>The Performance Academy</strong></h2>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <h2 class="logo-font text-white my-0">The<strong> Performance Academy</strong></h2>
                 </a>
             </div>
 
-            <div class="col-12">
-                <hr>
+            <!-- Search -->
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <form method="GET" action="{% url 'classes' %}">
+                    <div class="input-group w-100">
+                        <input class="form-control border border-white rounded-0" type="text" name="q" placeholder="Search">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-info border border-white rounded-0" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
 
-            <!-- Menus / Search / Account / Shopping Bag -->
-            <div class="col-12 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center my-0">
-
-                    <!-- Sing Menu -->
+            <!-- Account login / register & shopping basket -->
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-white nav-link" href="#" id="sing-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="text-white nav-link" href="#" id="user-options" 
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div>
-                                    <i class="fas fa-microphone"></i>
-                                </div>
-                                <p class="logo-font my-0">Sing</p>
-                            </div>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{% url 'classes' %}?category=rockpop" class="dropdown-item">Rock/Pop</a></li>
-                            <li><a href="{% url 'classes' %}?category=operaclassical" class="dropdown-item">Opera/Classical</a></li>
-                            <li><a href="{% url 'classes' %}?category=musicaltheatre" class="dropdown-item">Musical Theatre</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a href="{% url 'classes' %}?category=rockpop,operaclassical,musicaltheatre" class="dropdown-item">All Singing</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Dance Menu -->
-                    <li class="list-inline-item dropdown">
-                        <a class="text-white nav-link" href="#" id="dance-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div>
-                                    <i class="fas fa-shoe-prints"></i>
-                                </div>
-                                <p class="logo-font my-0">Dance</p>
-                            </div>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{% url 'classes' %}?category=ballet" class="dropdown-item">Ballet</a></li>
-                            <li><a href="{% url 'classes' %}?category=hiphop" class="dropdown-item">Hip Hop</a></li>
-                            <li><a href="{% url 'classes' %}?category=tap" class="dropdown-item">Tap</a></li>
-                            <li><a href="{% url 'classes' %}?category=ballroom" class="dropdown-item">Ballroom</a></li>
-                            <li><a href="{% url 'classes' %}?category=musicaltheatre" class="dropdown-item">Musical Theatre</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a href="{% url 'classes' %}?category=ballet,hiphop,tap,ballroom,musicaltheatre" class="dropdown-item">All Dancing</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Act Menu -->
-                    <li class="list-inline-item dropdown">
-                        <a class="text-white nav-link" href="#" id="act-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div>
-                                    <i class="fas fa-theater-masks"></i>
-                                </div>
-                                <p class="logo-font my-0">Act</p>
-                            </div>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{% url 'classes' %}?category=stage" class="dropdown-item">Stage</a></li>
-                            <li><a href="{% url 'classes' %}?category=screen" class="dropdown-item">Screen</a></li>
-                            <li><a href="{% url 'classes' %}?category=improv" class="dropdown-item">Improv</a></li>
-                            <li><a href="{% url 'classes' %}?category=musicaltheatre" class="dropdown-item">Musical Theatre</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a href="{% url 'classes' %}?category=stage,screen,improv,musicaltheatre" class="dropdown-item">All Acting</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Play Menu -->
-                    <li class="list-inline-item dropdown">
-                        <a class="text-white nav-link" href="#" id="play-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div>
-                                    <i class="fas fa-music"></i>
-                                </div>
-                                <p class="logo-font my-0">Play</p>
-                            </div>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{% url 'classes' %}?category=piano" class="dropdown-item">Piano</a></li>
-                            <li><a href="{% url 'classes' %}?category=guitar" class="dropdown-item">Guitar</a></li>
-                            <li><a href="{% url 'classes' %}?category=bassguitar" class="dropdown-item">Bass</a></li>
-                            <li><a href="{% url 'classes' %}?category=drums" class="dropdown-item">Drums</a></li>
-                            <li><a href="{% url 'classes' %}?category=ukulele" class="dropdown-item">Ukulele</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a href="{% url 'classes' %}?category=piano,guitar,bassguitar,drums,ukulele" class="dropdown-item">All Instruments</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- All Classes Menu -->
-                    <li class="list-inline-item dropdown">
-                        <a class="text-white nav-link" href="#" id="all-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div>
-                                    <i class="fas fa-bars"></i>
-                                </div>
-                                <p class="logo-font my-0">All</p>
-                            </div>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{% url 'classes' %}?sort=age&direction=asc" class="dropdown-item">By Age</a></li>
-                            <li><a href="{% url 'classes' %}?sort=price&direction=asc" class="dropdown-item">By Price</a></li>
-                            <li><a href="{% url 'classes' %}?sort=category&direction=asc" class="dropdown-item">By Category</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a href="{% url 'classes' %}" class="dropdown-item">All Classes</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Search Box -->
-                    <li class="list-inline-item">
-                        <a class="text-white nav-link" href="#" id="search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-search"></i></div>
-                                <p class="logo-font my-0">Search</p>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="search">
-                            <form class="form" method="GET" action="{% url 'classes' %}">
-                                <div class="input-group w-100">
-                                    <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search all classes">
-                                    <div class="input-group-append">
-                                        <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit">
-                                            <span class="icon">
-                                                <i class="fas fa-search"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </li>
-
-                    <!-- Account -->
-                    <li class="list-inline-item dropdown">
-                        <a class="text-white nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user"></i></div>
-                                <p class="logo-font my-0">Account</p>
+                                <div><i class="fas fa-user fa-lg"></i></div>
+                                <p class="my-0">Account</p>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_class' %}" class="dropdown-item">Class Management</a>
+                                    <a href="" class="dropdown-item">Class Management</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
@@ -204,12 +91,10 @@
                             {% endif %}
                         </div>
                     </li>
-
-                    <!-- Shopping Bag -->
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link" href="{% url 'view_bag' %}">
+                        <a class="{% if grand_total %}text-white font-weight-bold{% else %}text-white{% endif %} nav-link" href="{% url 'view_bag' %}">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-bag"></i></div>
+                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
                                         €{{ grand_total|floatformat:2 }}
@@ -224,28 +109,31 @@
             </div>
         </div>
             
-        <!-- Logo on small screens only
-        <div class="col d-lg-none bg-black text-center pt-2">
-            <h2 class="logo-font text-white" style="font-size:5vw">The<strong> Performance Academy</strong></h2>
-        </div> -->
+        <!-- Logo on small screens only -->
+        <div class="col d-lg-none text-center pt-2">
+            <a href="{% url 'home' %}" class="nav-link">
+                <h2 class="logo-font text-white" style="font-size:5vw">The<strong> Performance Academy</strong></h2>
+            </a>
+        </div>
 
-        <!-- Navigation 
-        <div class="row bg-dark">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- Navigation -->
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-dark w-100">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 {% include 'includes/mobile-top-header.html' %}
                 {% include 'includes/main-nav.html' %}
             </nav>
-        </div> -->
+        </div>
 
-        <!-- Discount banner 
+        <!-- Discount banner -->
         <div id="discount-banner" class="row text-center">
             <div class="col bg-purple text-white">
                 <h4 class="logo-font my-1">Book {{ discount_threshold }} or more classes, get 10% off!</h4>                
             </div>            
-        </div> -->
+        </div>
     </header>
 
     {% if messages %}
@@ -278,13 +166,13 @@
         </script>
     {% endblock %}
 
-    <!-- Footer 
+    <!-- Footer -->
     <footer class="mainfooter" role="contentinfo">
         <div class="footer-middle">
             <div class="container">
                 <div class="row">
 
-                    <!-- Column 1 
+                    <!-- Column 1 -->
                     <div class="col-sm-12 col-md-6 col-lg-3" align="center">
                         <div class="footer-pad">
                             <h5 class="logo-font">Classes</h5>
@@ -297,7 +185,7 @@
                         </div>
                     </div>
                 
-                    <!-- Column 2 
+                    <!-- Column 2 -->
                     <div class="col-sm-12 col-md-6 col-lg-3" align="center">
                         <div class="footer-pad">
                             <h5 class="logo-font">Information</h5>
@@ -310,7 +198,7 @@
                         </div>
                     </div>
 
-                    <!-- Column 3 
+                    <!-- Column 3 -->
                     <div class="col-sm-12 col-md-6 col-lg-3" align="center">
                         <div class="footer-pad">
                         <h5 class="logo-font">Contact</h5>
@@ -326,7 +214,7 @@
                         </div>
                     </div>
 
-                    <!-- Social links 
+                    <!-- Social links -->
                     <div class="col-sm-12 col-md-6 col-lg-3" align="center">
                         <h5 class="logo-font">Connect</h5>
                         <ul class="social-network social-circle">
@@ -337,7 +225,7 @@
 
                 </div>
 
-                <!-- Copyright declaration 
+                <!-- Copyright declaration -->
                 <div class="row">
                     <div class="col-12 copy">
                         <p class="text-center">© 2020 The Performance Academy. All Rights Reserved</p>
@@ -346,7 +234,7 @@
 
             </div>
         </div>
-    </footer> -->
+    </footer>
 
 </body>
 </html>

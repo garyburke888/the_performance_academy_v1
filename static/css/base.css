@@ -5,17 +5,17 @@ html {
 body {
     background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #000;
+    height: calc(100vh - 164px);
+    color: #555;
     font-family: 'Roboto';
 }
 
 .bg-black {
-    background: #000;
+    background-color: #000;
 }
 
 hr {
-    width: 80%;
-    background-color: #fff;
+    background-color: #6c757d;
 }
 
 /* from Bulma */
@@ -36,17 +36,9 @@ hr {
 }
 
 .shop-now-button {
-    background: #ffffff;
+    background: white;
     color: black;
-    width: 90%;
-    max-width: 260px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.bottom-fix {
-    bottom: 0px
+    min-width: 260px;
 }
 
 .btn-black {
@@ -86,7 +78,9 @@ hr {
 }
 
 .bg-purple {
-    background: #8b0000CC;
+    background: #16222A;
+    background: -webkit-linear-gradient(59deg, #3A6073, #16222A);
+    background: linear-gradient(59deg, #3A6073, #16222A);
 }
 
 .overlay {
@@ -234,15 +228,6 @@ input[name='q']::placeholder {
   text-transform: uppercase;
 }
 
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens 
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-} */
-
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
@@ -297,60 +282,6 @@ input[name='q']::placeholder {
 	color: #17a2b8; /* text-info */
 }
 
-/* Add/Edit Class Form */
-
-.btn-file {
-    position: relative;
-    overflow: hidden;
-}
-
-.btn-file input[type="file"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.custom-checkbox .custom-control-label::before {
-    border-radius: 0;
-    border-color: #dc3545;
-}
-
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
-    border-color: #dc3545;
-    border-radius: 0;
-}
-
-/* fixed top navbar only on medium and up 
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 220px;
-    }
-} */
-
-/* pad the top a bit when navbar is collapsed on mobile 
-@media (max-width: 991px) {
-    .header-container {
-        padding-top: 170px;
-    }
-
-    body {
-        height: calc(100vh - 116px);
-    }
-} */
-
 /* Footer */
 
 footer {
@@ -358,7 +289,6 @@ footer {
   background: -webkit-linear-gradient(59deg, #3A6073, #16222A);
   background: linear-gradient(59deg, #3A6073, #16222A);
   color: white;
-  margin-top:30px;
 }
 
 footer a {
@@ -458,4 +388,53 @@ ul.social-network li {
 
 .social-network a {
   background-color: #F9F9F9;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens 
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+} */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .header-container {
+        padding-top: 200px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    .header-container {
+        padding-top: 200px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .header-container {
+        padding-top: 200px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .header-container {
+        padding-top: 220px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1090px and up) */
+@media only screen and (min-width: 1090px) {
+
+    .header-container {
+        padding-top: 200px;
+    }
 }
