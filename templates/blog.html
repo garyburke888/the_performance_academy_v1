@@ -21,42 +21,25 @@
                         </div>
                     </div>
                 
+                    <!-- Iterate through articles for blog -->
                     <div class="row">
- 
-                       
                         {% for i in object_list %}
-              
-                                <div class="card mx-auto mb-5" style="width: 18rem;">
-                                    <div class="card-header">
-                                    <img class="card-img-top img-fluid" src="{{ i.image.url }}">
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{ i.title }}</h5>
-                                        <p class="card-text">{{ i.body|truncatechars:150 }}</p>
-                                        <a href="{% url 'blog_detail' i.pk %}" class="btn btn-info">Read more</a>
-                                        
-                                    </div>
-                                        <div class="card-footer">
-                                        <p class="text-muted">Posted by: {{ i.author }} | {{ i.date }}</p>
-                                        </div>
-                                    
+                            <div class="card mx-auto mb-5" style="width: 18rem;">
+                                <div class="card-header">
+                                <img class="card-img-top img-fluid" src="{{ i.image.url }}">
                                 </div>
-            
-                            <!-- <div class="col-12 col-md-2">
-                                <img class="border border-white" src="{{ i.image.url }}">
-                            </div>
-                            <div class="col-12 col-md-10">
-                                <h3><a href="{% url 'blog_detail' i.pk %}" class="text-info">{{ i.title }}</a></h3>
-                                <p class="text-white">{{ i.body }}</p>
-                                <p class="text-muted">Posted by: {{ i.author }} | {{ i.date }}</p>
-                                <hr>
-                            </div> -->
-                            {% endfor %}
-                            </div>
-                        </div>
-                        </div>
-                    
-            </div>
-        
-        
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ i.title }}</h5>
+                                    <p class="card-text">{{ i.body|truncatechars:150 }}</p>
+                                    <a href="{% url 'blog_detail' i.pk %}" class="btn btn-info">Read more</a>
+                                </div>
+                                <div class="card-footer">
+                                    <p class="text-muted">Posted by: {{ i.author }} | {{ i.date }}</p>
+                                </div>
+                             </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div> 
+        </div>
 {% endblock %}

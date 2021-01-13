@@ -56,7 +56,7 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white" href="#" id="instruments-link" 
+            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="instruments-link" 
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Instruments
             </a>
@@ -68,6 +68,10 @@
                 <a href="{% url 'classes' %}?category=ukulele" class="dropdown-item">Ukulele</a>
                 <a href="{% url 'classes' %}?category=piano,guitar,bassguitar,drums,ukulele" class="dropdown-item">All Instruments</a>
             </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-white" href="{% url 'blog' %}" id="blog-link">Blog</a>
         </li>
 
     </ul>

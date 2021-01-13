@@ -1,24 +1,42 @@
+{% extends "base.html" %}
 {% load static %}
- <!DOCTYPE html>
- <html lang="en">
- <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <link rel="stylesheet" href="{% static 'css/style.css' %}">
-   <title>My Blog</title>
- </head>
- <body>
-     <header>
-       <h1> <a href="">My Personal Blog</a> </h1>
-     </header>
-     <div class="container">
-     {% block content %}
-         <div class="details">
-         <h2>{{ article.title }}</h2>
-         <p>{{ article.body }}</p>
-         </div>
-     {% endblock content %}
-     </div>
- </body>
- </html>
+
+{% block page_header %}
+    <div class="container-fluid header-container bg-black">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+        <div class="container-fluid pb-5 bg-black">
+            <div class="row">
+                <div class="col-12 col-lg-8 mx-auto">
+
+                    <div class="row">
+                        <div class="col text-center">
+                            <h2 class="logo-font mb-4 text-white">{{ article.title }}</h2>
+                        </div>
+                    </div>
+                
+                    <!-- Full blog article -->
+                    <div class="row">
+                        <div class="col-12 col-md-4 mx-auto pb-3">
+                            <img class="img-fluid border border-white" src="{{ article.image.url }}">
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <p class="text-muted">Posted by: {{ article.author }} | {{ article.date }}</p>
+                            <p class="text-white">{{ article.body }}</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a href="{% url 'blog' %}" class="btn btn-info btn-lg border border-white rounded-0" role="button" aria-disabled="true"><i class="fas fa-chevron-left"></i> Back to Blog</a>
+                    </div>
+
+                </div>
+            </div> 
+        </div>
+{% endblock %}
