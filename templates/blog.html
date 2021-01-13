@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container-fluid header-container bg-black">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+        <div class="container-fluid pb-5 bg-black">
+            <div class="row">
+                <div class="col-12 col-lg-10 mx-auto">
+
+                    <div class="row">
+                        <div class="col text-center">
+                            <h2 class="logo-font mb-4 text-white">Blog</h2>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col text-white">
+                            {% for i in object_list %}
+                            <div class="article">
+
+                            <div class="col-12 col-lg-4">
+                                <img src="{{ i.image.url }}">
+                            </div>
+                            <div class="col-12 col-lg-8">
+                                                            <h3><a href="{% url 'blog_detail' i.pk %}" class="text-info">{{ i.title }}</a></h3>
+                            </div>
+                            <p>{{ i.body }}</p>
+                            <p class="text-muted">Posted by: {{ i.author }} | {{ i.date }}</p>
+                            <hr>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+{% endblock %}
