@@ -81,7 +81,7 @@
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                    <a href="" class="dropdown-item">Class Management</a>
+                                    <a href="{% url 'add_class' %}" class="dropdown-item">Add a Class</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
@@ -130,7 +130,7 @@
 
         <!-- Discount banner -->
         <div id="discount-banner" class="row text-center">
-            <div class="col bg-purple text-white">
+            <div class="col bg-purple text-black">
                 <h4 class="logo-font my-1">Book {{ discount_threshold }} or more classes, get 10% off!</h4>                
             </div>            
         </div>
@@ -165,76 +165,6 @@
             $('.toast').toast('show');
         </script>
     {% endblock %}
-
-    <!-- Footer -->
-    <footer class="mainfooter" role="contentinfo">
-        <div class="footer-middle">
-            <div class="container">
-                <div class="row">
-
-                    <!-- Column 1 -->
-                    <div class="col-sm-12 col-md-6 col-lg-3" align="center">
-                        <div class="footer-pad">
-                            <h5 class="logo-font">Classes</h5>
-                            <ul class="list-unstyled">
-                                <li><a href="{% url 'classes' %}?category=rockpop,operaclassical,musicaltheatre">Singing</a></li>
-                                <li><a href="{% url 'classes' %}?category=ballet,hiphop,tap,ballroom,musicaltheatre">Dancing</a></li>
-                                <li><a href="{% url 'classes' %}?category=stage,screen,improv,musicaltheatre">Acting</a></li>
-                                <li><a href="{% url 'classes' %}?category=piano,guitar,bass,drums,ukulele">Instruments</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                
-                    <!-- Column 2 -->
-                    <div class="col-sm-12 col-md-6 col-lg-3" align="center">
-                        <div class="footer-pad">
-                            <h5 class="logo-font">Information</h5>
-                            <ul class="list-unstyled">
-                                <li><a href="#">Covid-19</a></li>
-                                <li><a href="#">Child Protection Policy</a></li>
-                                <li><a href="#">Safety Policy</a></li>
-                                <li><a href="#">Policy Agreement</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Column 3 -->
-                    <div class="col-sm-12 col-md-6 col-lg-3" align="center">
-                        <div class="footer-pad">
-                        <h5 class="logo-font">Contact</h5>
-                            <ul class="list-unstyled">
-                                <li><a href="#">Contact Form</a></li>
-                                <li><a href="#">Application Form</a></li>
-                                <li><a href="#">Venues</a></li>
-                                <li><a href="#">More...</a></li>
-                                <li>
-                                <a href="#"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Social links -->
-                    <div class="col-sm-12 col-md-6 col-lg-3" align="center">
-                        <h5 class="logo-font">Connect</h5>
-                        <ul class="social-network social-circle">
-                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>				
-                    </div>
-
-                </div>
-
-                <!-- Copyright declaration -->
-                <div class="row">
-                    <div class="col-12 copy">
-                        <p class="text-center">© 2020 The Performance Academy. All Rights Reserved</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </footer>
 
 </body>
 </html>
