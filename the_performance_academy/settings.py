@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'articles',
+    'widget_tweaks',
     'boards',
 
     # Other
