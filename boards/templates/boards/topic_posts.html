@@ -1,4 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
 {% load gravatar %}
+
+{% block page_header %}
+    <div class="container-fluid header-container bg-black">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
 
 {% block title %}{{ topic.subject }}{% endblock %}
 
@@ -10,8 +20,19 @@
 
 {% block content %}
 
+    <div class="overlay"></div>
+        <div class="container-fluid pb-5 bg-black">
+            <div class="row">
+                <div class="col-12 col-lg-10 mt-3 mx-auto">
+
+                                        <div class="row">
+                        <div class="col text-center">
+                            <h2 class="logo-font mb-4 text-white">Posts</h2>
+                        </div>
+                    </div>
+
   <div class="mb-4">
-    <a href="{% url 'reply_topic' topic.board.pk topic.pk %}" class="btn btn-primary" role="button">Reply</a>
+    <a href="{% url 'reply_topic' topic.board.pk topic.pk %}" class="btn btn-info border border-white rounded-0" role="button">Reply</a>
   </div>
 
   {% for post in posts %}
@@ -49,5 +70,9 @@
   {% endfor %}
 
   {% include 'includes/pagination.html' %}
+
+                </div>
+            </div>
+        </div>
 
 {% endblock %}
