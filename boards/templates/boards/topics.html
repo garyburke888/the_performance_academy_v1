@@ -1,4 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
 {% load humanize %}
+
+{% block page_header %}
+    <div class="container-fluid header-container bg-black">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
 
 {% block breadcrumb %}
   <li class="breadcrumb-item"><a href="{% url 'home' %}">Boards</a></li>
@@ -6,11 +16,23 @@
 {% endblock %}
 
 {% block content %}
+
+    <div class="overlay"></div>
+        <div class="container-fluid pb-5 bg-black">
+            <div class="row">
+                <div class="col-12 col-lg-10 mt-3 mx-auto">
+
+                                        <div class="row">
+                        <div class="col text-center">
+                            <h2 class="logo-font mb-4 text-white">Topics</h2>
+                        </div>
+                    </div>
+
   <div class="mb-4">
-    <a href="{% url 'new_topic' board.pk %}" class="btn btn-primary">New topic</a>
+    <a href="{% url 'new_topic' board.pk %}" class="btn btn-info border border-white rounded-0">New topic</a>
   </div>
 
-  <table class="table table-striped mb-4">
+  <table class="table table-dark">
     <thead class="thead-inverse">
       <tr>
         <th>Topic</th>
@@ -48,5 +70,9 @@
   </table>
 
   {% include 'includes/pagination.html' %}
+
+                </div>
+            </div>
+        </div>
 
 {% endblock %}
