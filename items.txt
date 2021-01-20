@@ -1,0 +1,9 @@
+Remove Ratings app and all references to Ratings
+Discount not working correctly at checkout and in admin but works correctly on payment form and with Stripe
+Add better class descriptions throughout
+Look at user images on boards, maybe remove or add
+Add footer
+Possible redesign of login and register pages
+Add and complete Django testing
+Complete README
+Webhooks not working, from Stripe (401 error)

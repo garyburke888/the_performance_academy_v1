@@ -33,6 +33,7 @@ class Order(models.Model):
     original_bag = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
 
+
     def _generate_order_number(self):
         """
         Generate a random, unique order number using UUID
@@ -45,7 +46,7 @@ class Order(models.Model):
         accounting for delivery costs.
         """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
-        if int(self.order_total) >= settings.DISCOUNT_THRESHOLD:
+        if int(self.quantity) >= settings.DISCOUNT_THRESHOLD:
             self.discount = float(self.order_total) * (settings.STANDARD_DISCOUNT_PERCENTAGE / 100)
         else:
             self.discount = 0
