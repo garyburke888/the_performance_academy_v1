@@ -1,6 +1,6 @@
 Discount not working correctly at checkout and in admin but works correctly on payment form and with Stripe
-Move blog templates to blog app
 Add better class descriptions throughout
+Change style of messages
 Look at user images on boards, maybe remove or add
 Fix footer, does not move to bottom on short pages
 Try add 'latest from the blog' in the footer
