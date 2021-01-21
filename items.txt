@@ -1,9 +1,12 @@
-Remove Ratings app and all references to Ratings
 Discount not working correctly at checkout and in admin but works correctly on payment form and with Stripe
+Move blog templates to blog app
 Add better class descriptions throughout
 Look at user images on boards, maybe remove or add
-Add footer
+Fix footer, does not move to bottom on short pages
+Try add 'latest from the blog' in the footer
+Blog, try add view next / previous posts
 Possible redesign of login and register pages
 Add and complete Django testing
 Complete README
 Webhooks not working, from Stripe (401 error)
+Emails do not send yet (currently they are based on webhooks)

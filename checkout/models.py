@@ -10,6 +10,7 @@ from django_countries.fields import CountryField
 from classes.models import Class
 from profiles.models import UserProfile
 
+
 # Create your models here.
 
 
@@ -46,7 +47,7 @@ class Order(models.Model):
         accounting for delivery costs.
         """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
-        if int(self.quantity) >= settings.DISCOUNT_THRESHOLD:
+        if int('{{ class_count }}') >= settings.DISCOUNT_THRESHOLD:
             self.discount = float(self.order_total) * (settings.STANDARD_DISCOUNT_PERCENTAGE / 100)
         else:
             self.discount = 0

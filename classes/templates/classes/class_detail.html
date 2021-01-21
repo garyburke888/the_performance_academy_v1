@@ -65,16 +65,7 @@
                     </p>
                     {% endif %}
                     
-                    <!-- Check for and display class rating -->
-                    {% if class.rating %}
-                        <small class="text-muted">
-                            <i class="fas fa-star mr-1"></i>{{ class.rating }} / 5
-                        </small>
-                    {% else %}
-                        <small class="text-muted">
-                            <i class="fas fa-star mr-1"></i>No Ratings Yet
-                        </small>
-                    {% endif %}
+                    <!-- Display edit and delete buttons for admin -->
                     {% if request.user.is_superuser %}
                         <small class="ml-3">
                             <a href="{% url 'edit_class' class.id %}">Edit</a> | 
