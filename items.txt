@@ -1,4 +1,4 @@
-Change style of messages
+Amend messages & toasts
 Update style on profile page
 If a class is not weekdays, don't show the NA - try show the actual day if possible.
 Look at user images on boards, maybe remove or add

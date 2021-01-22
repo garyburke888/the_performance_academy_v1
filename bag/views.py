@@ -27,13 +27,13 @@ def add_to_bag(request, item_id):
         if item_id in list(bag.keys()):
             if day in bag[item_id]['items_by_day'].keys():
                 bag[item_id]['items_by_day'][day] += quantity
-                messages.success(request, f'Updated day {day.upper()} {a_class.name} quantity to {bag[item_id]["items_by_day"][day]}')
+                messages.success(request, f'Updated {a_class.name} ({day.upper()}) quantity to {bag[item_id]["items_by_day"][day]}')
             else:
                 bag[item_id]['items_by_day'][day] = quantity
-                messages.success(request, f'Added day {day.upper()} {a_class.name} to your bag')
+                messages.success(request, f'Added {a_class.name} ({day.upper()}) to your bag')
         else:
             bag[item_id] = {'items_by_day': {day: quantity}}
-            messages.success(request, f'Added day {day.upper()} {a_class.name} to your bag')
+            messages.success(request, f'Added {a_class.name} ({day.upper()}) to your bag')
     else:
         if item_id in list(bag.keys()):
             bag[item_id] += quantity
@@ -59,12 +59,12 @@ def adjust_bag(request, item_id):
     if day:
         if quantity > 0:
             bag[item_id]['items_by_day'][day] = quantity
-            messages.success(request, f'Updated day {day.upper()} {a_class.name} quantity to {bag[item_id]["items_by_day"][day]}')
+            messages.success(request, f'Updated {a_class.name} ({day.upper()})  quantity to {bag[item_id]["items_by_day"][day]}')
         else:
             del bag[item_id]['items_by_day'][day]
             if not bag[item_id]['items_by_day']:
                 bag.pop(item_id)
-            messages.success(request, f'Removed day {day.upper()} {a_class.name} from your bag')
+            messages.success(request, f'Removed {a_class.name} ({day.upper()})  from your bag')
     else:
         if quantity > 0:
             bag[item_id] = quantity
@@ -91,7 +91,7 @@ def remove_from_bag(request, item_id):
             del bag[item_id]['items_by_day'][day]
             if not bag[item_id]['items_by_day']:
                 bag.pop(item_id)
-            messages.success(request, f'Removed day {day.upper()} {a_class.name} from your bag')
+            messages.success(request, f'Removed {a_class.name} ({day.upper()})  from your bag')
         else:
             bag.pop(item_id)
             messages.success(request, f'Removed {a_class.name} from your bag')
