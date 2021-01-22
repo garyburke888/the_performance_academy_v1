@@ -28,7 +28,7 @@
                         </div>
                         <div class="col-9">
                             <p class="my-0"><strong>{{ item.class.name }}</strong></p>
-                            <p class="my-0 small">Day: {% if item.class.is_weekdays %}{{ item.day|upper }}{% else %}N/A{% endif %}</p>
+                            <p class="my-0 small">Day: {% if item.class.is_weekdays %}{{ item.day|upper }}{% else %}SATURDAY{% endif %}</p>
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
                     </div>
@@ -36,10 +36,17 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <strong><p class="mt-3 mb-1 text-black">
-                        Total{% if discount_delta > 0 %} (Exc. discount){% endif %}: 
-                        <span class="float-right">€{{ total|floatformat:2 }}</span>
-                    </p></strong>
+                    <strong>
+                        {% if discount_delta > 0 %}
+                        <p class="mt-3 mb-1 text-black">
+                        Total (Exc. discount): <span class="float-right">€{{ grand_total|floatformat:2 }}</span>
+                        </p>
+                        {% else %}
+                        <p class="mt-3 mb-1 text-black">
+                        Total (Inc. discount): <span class="float-right">€{{ grand_total|floatformat:2 }}</span>
+                        </p>
+                        {% endif %}
+                    </strong>
                     {% if discount_delta > 0 %}
                         <p class="mb-0 p-2 bg-warning shadow-sm text-black text-center">
                             Add <strong>{{ discount_delta }}</strong> more class to get a 10% discount!
