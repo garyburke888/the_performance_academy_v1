@@ -1,6 +1,7 @@
-Look at user images on boards, maybe remove or add
-Blog, try add view next / previous posts
-Add and complete Django testing
-Complete README
-Webhooks not working, from Stripe (401 error)
-Emails do not send yet (currently they are based on webhooks)
+Look at user images on boards, maybe remove or add.
+Boards - allow superuser to delete topics etc, maybe from admin.
+Blog, try add view next / previous posts.
+Blog, allow superuser to post to the blog once logged in.
+Add and complete Django testing.
+Webhooks not working, from Stripe (401 error).
+Emails do not send yet (currently they are based on webhooks).

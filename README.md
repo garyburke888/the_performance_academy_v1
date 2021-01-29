@@ -41,7 +41,7 @@
 
 ### Design
 -   #### Colour Scheme
-    -   The site is a a dark theme, mainly black backgrounds and white text, making use of Bootstrap info style buttons.
+    -   The site uses a dark theme, mainly black backgrounds and white text, making use of Bootstrap info style buttons.
 -   #### Typography
     -   Roboto 2.0 is used across the site.
 -   #### Imagery
@@ -62,7 +62,7 @@ Here are the designs I made for the site:
 ## Features
 
 ### Visible to all users
--   **Index page** - Upon entering the site you are greeted by the main nav, a discount banner, a large performing arts background image, a 'New Term Now Enroling' statement and a call-to-action button.
+-   **Index page** - Upon entering the site the user is greeted by the main nav, a discount banner, a large performing arts background image, a 'New Term Now Enroling' statement and a call-to-action button.
 -   **Main Nav Menu** - The main menu (collapsed on mobile devices) features dropdown lists where the user can select classes and categories as follows;
     -   Classes by age, price, category or all classes.
     -   Singing classes in the following categories: Rock/Pop, Opera/Classical, Musical Theatre or all singing.
@@ -78,21 +78,24 @@ Here are the designs I made for the site:
 -   **Shopping Bag page** - The user can at any point click on the 'bag' link in the main nav to see a full, detailed list of their items. From here the user can update their bag by removing items or increasing the quantity of items. They can also click a button to go to checkout or keep shopping. Again, this page features a discount reminder (if the user has only bought one class they will see a message stating 'You could get a 10% discount by adding 1 more class!') unless the user has already added more than one item to their bag, in this case the reminder will not show up.
 -   **Checkout page** - The user will be prompted to enter their contact details, billing information and credit card number into the checkout form and see a summary of their order. The user will have the option to 'Create an account' or 'Login' to save this information on their profile. They will also have the option to complete order or adjust bag with buttons at the bottom of the page. If the user leaves a mandatory field (denoted by *) blank, they will be prompted to 'please fill out this field'. If the user enters an invalid card number, they will recieve an on-screen message stating the same.
 -   **Checkout Success page** - If a user makes a successful transaction they are taken to the checkout success page which features a popup success message (with order number), their full order information and a message stating that a confirmation email has been sent to the email they submitted on the checkout form.
--   **Boards page**
--   **Topics page (Boards)**
--   **Topic Posts page (Boards)**
--   **Blog page**
--   **Blog Detail page**
+-   **Boards page** - This page features a simple bootstrap table with a list of the current discussion boards (as created by the superuser), their title (a clickable link to go to that board and see a list of topics) how many posts & topics they each contain and when the last post was made on that board (a clickable link to go to that post).
+-   **Topics page (Boards)** - Each board contains a topics page, which is a simple bootstrap table containing all the topics under that board heading. The user will see topic title (a clickable link to go to that discussion topic), the name of the user who started the topic, how many replies it has received, how many views it has received and when it was last updated. There is also a button to allow registered users to add a new topic. If a non-registered user clicks this button, they will be prompted to login or register.
+-   **Topic Posts page (Boards)** - Each topic contains a posts page, which is a list (in descending chronological order) of replies to that topic. There is a button to allow registered users to reply. If a non-registered user clicks this button, they will be prompted to login or register.
+-   **Blog page** - This page features a list of blog posts (as made by the superuser) laid out as bootstrap cards. Each card features an image, post title, article and 'posted by' information. Blog articles are truncated and a read more link has been added which takes the user to the 'Blog Detail' page.
+-   **Blog Detail page** - This page features the full article of any blog post, and allows the user to link back tot the main blog by way of a button link.
+-   **Register / Sign Up page** - This page allows users to register with a simple form requesting the users email address, username and password. It allows allows the user to return to the login page if they are already registered.
+-   **Login / Sign In page** - Allows already registed users to sign in with their username and password. Allows users to go to the register page if they are not yet registered, prompting them to sign up. Features a 'remember me' checkbox, telling the browser to save a cookie so that if the user closes out the window for the site without signing out, the next time they go back, they will be signed back in automatically.
 
 ### Visible to registered users
--   **Profile page**
--   **Edit Post page (Boards)**
--   **New Topic page (Boards)**
--   **Reply Topic page (Boards)**
+-   **Profile page** - This page features the username and 'billing details' (if they have been saved). It also features an order history.
+-   **Edit Post page (Boards)** - Allows a registered user to edit any post they have made, featuring a simple 'message' input field and a 'save changes' button.
+-   **New Topic page (Boards)** - Allows a registered user to add a new topic to a board, features a 'subject' input field, 'message' input field and a 'post' button.
+-   **Reply Topic page (Boards)** - Allows a registered user to post a reply on any topic, features a simple 'message' input field and a 'post a reply' button.
 
 ### Visible to superuser (admin)
--   **Add Class page**
--   **Edit Class page**
+-   **Add Class page** - An 'add class' link appears in the 'account' dropdown menu item allowing the superuser to add a new class by way of a form. The form features a dropdown selection of categories and input fields for sku, name, description, day information, price, age, setting (group/solo), teacher, term and image.
+-   **Edit/Delete** - If the superuser is logged in, edit and delete links appear on each class card and on the class detail page for quick access to these functions.
+-   **Edit Class page** - Features the same form as the 'add class' page but is pre-populated with the current information about a given class.
 
 ## Technologies Used
 
@@ -106,7 +109,7 @@ Here are the designs I made for the site:
 -   [Django](https://www.djangoproject.com/)
     - Django was used to develop the site.
 -   [SQLite](https://www.sqlite.org/)
-    - SQLite (databse engine used by default with Django)
+    - SQLite (database engine used by default with Django)
 -   [Bootstrap](https://getbootstrap.com/)
     - Bootstrap was used to help with design, layout and responsiveness.
 -   [Font Awesome](https://fontawesome.com/)
@@ -134,7 +137,7 @@ Here are the designs I made for the site:
 ### Testing User Stories from User Experience (UX) Section
 
 ### Site UI/UX & Browser Compatibility Testing
--   Manual testing was carried out on this site by the developers family members to review the UX and site responsivness.
+-   Manual testing was carried out on this site by the developer's family members to review the UX and site responsivness.
 -   Chrome dev tools were used to review responsivness on multiple devices;
     - Moto G4
     - Galaxy S5
