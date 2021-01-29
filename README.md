@@ -50,21 +50,49 @@
 
 ### Wireframes
 Here are the designs I made for the site:
--   [Home page on desktop](/media/tpa_wf1.jpg)
+-   [Index page on desktop](/media/tpa_wf1.jpg)
 -   [Classes page on desktop](/media/tpa_wf2.jpg)
--   [Home, Classes and Class Detail pages on smartphones](/media/tpa_wf3.jpg)
+-   [Index, Classes and Class Detail pages on smartphones](/media/tpa_wf3.jpg)
 -   [Shopping Bag popup, Checkout and Checkout Success pages on smartphones](/media/tpa_wf4.jpg)
 -   [Blog, Boards and Profile pages on smartphones](/media/tpa_wf5.jpg)
 -   [Board Posts and Board Reply/Add page on tablets](/media/tpa_wf6.jpg)
 -   [Add/Edit Class and Sign Out pages on tablets](/media/tpa_wf7.jpg)
--   [The Performance Academy DB Entity Relationship Diagram](/static/images/erisk_erd.png)
+-   [DB Entity Relationship Diagram](/media/erd_tpa.jpg)
 
 ## Features
--   Responsive on all screen sizes.
--   User registration, login/logout, password reset, profile update and billing information storage.
--   Search functionality.
--   Mobile collapse nav bar.
--   Different views for user levels (Admin/User)
+
+### Visible to all users
+-   **Index page** - Upon entering the site you are greeted by the main nav, a discount banner, a large performing arts background image, a 'New Term Now Enroling' statement and a call-to-action button.
+-   **Main Nav Menu** - The main menu (collapsed on mobile devices) features dropdown lists where the user can select classes and categories as follows;
+    -   Classes by age, price, category or all classes.
+    -   Singing classes in the following categories: Rock/Pop, Opera/Classical, Musical Theatre or all singing.
+    -   Dancing classes in the following categories: Ballet, Hip Hop, Tap, Ballroom, Musical Theatre or all dancing.
+    -   Acting classes in the following categories: Stage, Screen, Improv, Musical Theatre or all acting.
+    -   Instrument classes in the following categories: Piano, Guitar, Bass Guitar, Drums, Ukulele or all instruments.
+-   **Mian Nav Search Box** - Always visible, some info on how this works...
+-   **Main Nav Account** - Always visible dropdown menu to register or login.
+-   **Main Nav Shopping Bag** - Always visible link to the session users shopping bag, which also contains the current total cost of items in the bag.
+-   **Discount Banner** - Always visible to remind users they can recieve a discount by booking more than 1 class.
+-   **Classes page** - This is main page of the site which features a list of available classes displayed in bootstrap cards. The list of classes can be sorted directly from the 'sort by...' dropdown which includes age (youngest-oldest/oldest-youngest), price (low-high/high-low), name (a-z/z-a) or category (a-z/z-a). When a user selects a certain category or group of categories ('All Singing' for example) from the main menu, all classes in that category / those categories will be listed on the classes page, with an array of bootstrap badges displaying on top which are also quick links to categories themselves. Click on the image of any class to see further details about that class.
+-   **Class Detail page** - The class detail page contains more information about a given class, such as a full description, the teacher, what day it takes place etc. It also allows the user to add the class to their shopping bag. Some classes take place on weekdays ('Junior Voice' for example) and with this in mind the user can select their preferred day (Monday-Friday). This function is disabled for classes that take place only on one day. The user can click a button to add an item to their bag or keep shopping. If the user adds an item to their bag, a success message pops up with a summary of the bag contents and a link to go to checkout. This popup also features a discount reminder (if the user has only bought one class they will see a message stating 'Add 1 more class to get a 10% discount!') unless the user has already added more than one item to their bag, in this case the reminder will not show up.
+-   **Shopping Bag page** - The user can at any point click on the 'bag' link in the main nav to see a full, detailed list of their items. From here the user can update their bag by removing items or increasing the quantity of items. They can also click a button to go to checkout or keep shopping. Again, this page features a discount reminder (if the user has only bought one class they will see a message stating 'You could get a 10% discount by adding 1 more class!') unless the user has already added more than one item to their bag, in this case the reminder will not show up.
+-   **Checkout page** - The user will be prompted to enter their contact details, billing information and credit card number into the checkout form and see a summary of their order. The user will have the option to 'Create an account' or 'Login' to save this information on their profile. They will also have the option to complete order or adjust bag with buttons at the bottom of the page. If the user leaves a mandatory field (denoted by *) blank, they will be prompted to 'please fill out this field'. If the user enters an invalid card number, they will recieve an on-screen message stating the same.
+-   **Checkout Success page** - If a user makes a successful transaction they are taken to the checkout success page which features a popup success message (with order number), their full order information and a message stating that a confirmation email has been sent to the email they submitted on the checkout form.
+-   **Boards page**
+-   **Topics page (Boards)**
+-   **Topic Posts page (Boards)**
+-   **Blog page**
+-   **Blog Detail page**
+
+### Visible to registered users
+-   **Profile page**
+-   **Edit Post page (Boards)**
+-   **New Topic page (Boards)**
+-   **Reply Topic page (Boards)**
+
+### Visible to superuser (admin)
+-   **Add Class page**
+-   **Edit Class page**
 
 ## Technologies Used
 
