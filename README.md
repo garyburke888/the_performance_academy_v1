@@ -1,6 +1,5 @@
 # The Performance Academy
-
-![eRisk Responsive Design](/static/images/erisk_multi.png)
+![The Performance Academy Responsive Design](/static/images/erisk_multi.png)
 
 [View the live site here.](http://flask-risk-manager-project.herokuapp.com/)
 
@@ -50,40 +49,32 @@
     -   Site images are stored...
 
 ### Wireframes
-
-![The Performance Academy Wireframes](/media/tpa_wf1.jpg)
-![The Performance Academy Wireframes](/media/tpa_wf2.jpg)
-![The Performance Academy Wireframes](/media/tpa_wf3.jpg)
-![The Performance Academy Wireframes](/media/tpa_wf4.jpg)
-![The Performance Academy Wireframes](/media/tpa_wf5.jpg)
-![The Performance Academy Wireframes](/media/tpa_wf6.jpg)
-![The Performance Academy Wireframes](/media/tpa_wf7.jpg)
-![eRisk MongoDB Entity Relationship Diagram](/static/images/erisk_erd.png)
+Here are the designs I made for the site:
+-   [Home page on desktop](/media/tpa_wf1.jpg)
+-   [Classes page on desktop](/media/tpa_wf2.jpg)
+-   [Home, Classes and Class Detail pages on smartphones](/media/tpa_wf3.jpg)
+-   [Shopping Bag popup, Checkout and Checkout Success pages on smartphones](/media/tpa_wf4.jpg)
+-   [Blog, Boards and Profile pages on smartphones](/media/tpa_wf5.jpg)
+-   [Board Posts and Board Reply/Add page on tablets](/media/tpa_wf6.jpg)
+-   [Add/Edit Class and Sign Out pages on tablets](/media/tpa_wf7.jpg)
+-   [The Performance Academy DB Entity Relationship Diagram](/static/images/erisk_erd.png)
 
 ## Features
-
 -   Responsive on all screen sizes.
 -   User registration, login/logout, password reset, profile update and billing information storage.
 -   Search functionality.
 -   Mobile collapse nav bar.
 -   Different views for user levels (Admin/User)
 
-![eRisk Risk Register](/static/images/erisk_risk_reg.png)
-![eRisk Index / Login / Register / Profile](/static/images/erisk_screenshots_1.png)
-![eRisk Add / Edit / Matrix](/static/images/erisk_screenshots_2.png)
-![eRisk Delete / Owners](/static/images/erisk_screenshots_3.png)
-
 ## Technologies Used
 
 ### Languages
-
 -   [HTML](https://www.w3schools.com/html/)
 -   [CSS](https://www.w3schools.com/css/)
 -   [JavaScript](https://www.javascript.com/)
 -   [Python](https://www.python.org/)
 
 ### Frameworks, Libraries & Programs
-
 -   [Django](https://www.djangoproject.com/)
     - Django was used to develop the site.
 -   [SQLite](https://www.sqlite.org/)
@@ -102,37 +93,49 @@
 ### Django Testing
 -   
 
-### Code
--   The W3C Markup & CSS Validators [here](https://validator.w3.org/) were used to ensure there were no critical syntax errors in the project.
--   The PEP8 online checker [here](http://pep8online.com/) was used to check Python code for PEP8 requirements.
+### Defensive Design Testing
+-   As detailed above all features have been designed with the consideration to the session user to manage the user actions and visibility.
+-   Navigation menu items have been restricted based on session user.
+
+### Code Validators
+-   [W3C HTML validator](https://validator.w3.org/) to validate HTML code.
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to validate CSS code
+-   [PEP8 online check](http://pep8online.com/) to review Python code for PEP8 requirements.
+-   [Pylint](https://www.pylint.org/) to analyse and validate Python code.
 
 ### Testing User Stories from User Experience (UX) Section
 
-### Further Testing
-
--   The site was tested on Google Chrome, Opera, Microsoft Edge and Safari browsers.
--   The site was viewed on a variety of devices such as Desktop, Laptop, iPhone.
--   Testing was done to ensure there were no broken links, using link checker???
--   Co-workers, friends and family members were asked to review the app to point out any bugs and/or user experience issues.
+### Site UI/UX & Browser Compatibility Testing
+-   Manual testing was carried out on this site by the developers family members to review the UX and site responsivness.
+-   Chrome dev tools were used to review responsivness on multiple devices;
+    - Moto G4
+    - Galaxy S5
+    - Pixel 2/2 XL
+    - iPhone 5/5E/6/7/8/8+/X
+    - iPad/Pro
+    - Surface Duo
+    - Galaxy Fold
+- Cross browser testing was also attempted on Chrome, Opera, Edge, Firefox and Safari.
+- Chrome Lighthouse report shows site is highly responsive (insert image)
 
 ### Known Bugs
-
 -   Webhooks from Stripe not working, despite efforts to remedy, a 401 error remains, though payment information can be sent to Stripe without issue.
 
 ## Deployment
+This project was created using Github. From there I used Gitpod to write my code. Then I used commits to git followed by pushes to my GitHub repository. I've deployed this project to Heroku. For deployment on Heroku I've used the following steps;
+-   step 1...
 
 ## Credits
 
-### Tutorial
+### Tutorials
 -   This app was built in conjunction with The Code Institute 'Fullstack Frameworks with Django' module.
+-   [Tutorial 1](https://www.pythonistaplanet.com/how-to-create-blog-using-django/) - used to help create the 'Blog' app.
+-   [Tutorial 2](https://simpleisbetterthancomplex.com/series/2017/09/04/a-complete-beginners-guide-to-django-part-1.html) - used to help create the 'Boards' app.
 
 ### Code & Content
--   [Am I Responsive?](http://ami.responsivedesign.is/) - Used to obtain README image of app on various screens.
+-   [Am I Responsive?](http://ami.responsivedesign.is/) - Used to obtain main README image of site on various screens.
 
 ### Acknowledgements
-
 -   Mentor - Gerry McBride
 -   Tutor Support - Code Institute
 -   Developer - Gary Burke
--   Tutorial (Blog) - 
--   Tutorial (Boards) - 
