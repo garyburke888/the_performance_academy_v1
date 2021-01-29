@@ -1,8 +1,4 @@
-Amend messages & toasts
-If a class is not weekdays, don't show the NA - try show the actual day if possible.
 Look at user images on boards, maybe remove or add
-Fix footer, does not move to bottom on short pages
-Try add 'latest from the blog' in the footer
 Blog, try add view next / previous posts
 Add and complete Django testing
 Complete README
