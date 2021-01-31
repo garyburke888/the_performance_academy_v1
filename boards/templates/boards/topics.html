@@ -49,10 +49,12 @@
           <td>
             <p class="mb-0">
               <a href="{{ topic_url }}">{{ topic.subject }}</a>
-                                                  <!-- Show delete board link to superuser -->
-                                    {% if request.user.is_superuser %}
-                                    <a class="text-danger" href="{% url 'delete_board' board.id %}">Delete</a>
-                                    {% endif %}
+                <!-- Show delete topic link to superuser -->
+                {% if request.user.is_superuser %}
+                <small>
+                    <a class="text-danger" href="{% url 'delete_topic' topic.id %}">Delete</a>
+                </small>
+                {% endif %}
             </p>
             <small class="text-muted">
               Pages:

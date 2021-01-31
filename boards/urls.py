@@ -11,9 +11,8 @@ urlpatterns = [
          views.reply_topic, name='reply_topic'),
     path('<int:pk>/topics/<int:topic_pk>/posts/<int:post_pk>/edit/',
          views.PostUpdateView.as_view(), name='edit_post'),
-    path('<int:pk>', views.TopicListView.as_view(), name='board_topics'),
     path('delete/<int:board_id>/',
          views.delete_board, name='delete_board'),
-    path('delete/<int:topic_id>/',
+    path('delete/topics/<int:topic_id>/',
          views.delete_topic, name='delete_topic'),
 ]
