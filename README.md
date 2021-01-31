@@ -94,8 +94,11 @@ Here are the designs I made for the site:
 
 ### Visible to superuser (admin)
 -   **Add Class page** - An 'add class' link appears in the 'account' dropdown menu item allowing the superuser to add a new class by way of a form. The form features a dropdown selection of categories and input fields for sku, name, description, day information, price, age, setting (group/solo), teacher, term and image.
--   **Edit/Delete** - If the superuser is logged in, edit and delete links appear on each class card and on the class detail page for quick access to these functions.
+-   **Edit/Delete (Class)** - If the superuser is logged in, edit and delete links appear on each class card and on the class detail page for quick access to these functions.
 -   **Edit Class page** - Features the same form as the 'add class' page but is pre-populated with the current information about a given class.
+-   **Add Article page** - An 'post to blog' link appears in the 'account' dropdown menu item allowing superuser to add a new article to the blog by way of a form featuring author, title, body, date and image input fields.
+-   **Edit/Delete (Article)** - if the superuser is logged in, edit and delete links appear on each blog detail page for quick access to these functions.
+-   **Edit Article page** - Features the same form as the 'add article' page but is pre-populated with the current information of that particluar blog artice.
 
 ## Technologies Used
 

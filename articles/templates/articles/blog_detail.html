@@ -32,10 +32,10 @@
 
                             <!-- Show edit / delete article links to admin -->
                             {% if request.user.is_superuser %}
-                            <p class="text-muted">
+                            <small>
                                 <a href="{% url 'edit_article' article.id %}">Edit</a> | 
                                 <a class="text-danger" href="{% url 'delete_article' article.id %}">Delete</a>
-                            </p>
+                            </small>
                             {% endif %}
                         </div>
                         

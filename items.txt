@@ -7,3 +7,4 @@ Webhooks not working, from Stripe (401 error).
 Emails do not send yet (currently they are based on webhooks).
 Clean up all indentation on all files, mainly divs.
 Clean up CSS file, there's some odd quotes in there.
+Add screenshots of add, edit and delete article functionality in blog.
