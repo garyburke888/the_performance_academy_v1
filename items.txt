@@ -1,10 +1,11 @@
-Look at user images on boards, maybe remove or add.
+Remove user images from boards.
 Boards - allow superuser to delete topics etc, maybe from admin.
 Blog, try add view next / previous posts.
-Blog, allow superuser to post to the blog once logged in.
 Add and complete Django testing.
 Webhooks not working, from Stripe (401 error).
 Emails do not send yet (currently they are based on webhooks).
 Clean up all indentation on all files, mainly divs.
 Clean up CSS file, there's some odd quotes in there.
 Add screenshots of add, edit and delete article functionality in blog.
+Remove breadcrumbs from boards.
+Comments needed throughout.

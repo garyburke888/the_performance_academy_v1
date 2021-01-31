@@ -1,4 +1,5 @@
 from django.db.models import Count
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import get_object_or_404, redirect, render
@@ -29,7 +30,8 @@ class TopicListView(ListView):
 
     def get_queryset(self):
         self.board = get_object_or_404(Board, pk=self.kwargs.get('pk'))
-        queryset = self.board.topics.order_by('-last_updated').annotate(replies=Count('posts') - 1)
+        queryset = self.board.topics.order_by(
+            '-last_updated').annotate(replies=Count('posts') - 1)
         return queryset
 
 
@@ -49,7 +51,9 @@ class PostListView(ListView):
         return super().get_context_data(**kwargs)
 
     def get_queryset(self):
-        self.topic = get_object_or_404(Topic, board__pk=self.kwargs.get('pk'), pk=self.kwargs.get('topic_pk'))
+        self.topic = get_object_or_404(
+            Topic, board__pk=self.kwargs.get('pk'),
+            pk=self.kwargs.get('topic_pk'))
         queryset = self.topic.posts.order_by('created_at')
         return queryset
 
@@ -72,7 +76,8 @@ def new_topic(request, pk):
             return redirect('topic_posts', pk=pk, topic_pk=topic.pk)
     else:
         form = NewTopicForm()
-    return render(request, 'boards/new_topic.html', {'board': board, 'form': form})
+    return render(request,
+                  'boards/new_topic.html', {'board': board, 'form': form})
 
 
 def topic_posts(request, pk, topic_pk):
@@ -95,7 +100,8 @@ def reply_topic(request, pk, topic_pk):
             return redirect('topic_posts', pk=pk, topic_pk=topic_pk)
     else:
         form = PostForm()
-    return render(request, 'boards/reply_topic.html', {'topic': topic, 'form': form})
+    return render(request,
+                  'boards/reply_topic.html', {'topic': topic, 'form': form})
 
 
 @method_decorator(login_required, name='dispatch')
@@ -115,4 +121,31 @@ class PostUpdateView(UpdateView):
         post.updated_by = self.request.user
         post.updated_at = timezone.now()
         post.save()
-        return redirect('topic_posts', pk=post.topic.board.pk, topic_pk=post.topic.pk)
+        return redirect('topic_posts',
+                        pk=post.topic.board.pk, topic_pk=post.topic.pk)
+
+
+@login_required
+def delete_board(request, board_id):
+    """ Delete a board """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    board = get_object_or_404(Board, pk=board_id)
+    board.delete()
+    messages.success(request, 'Board deleted!')
+    return redirect(reverse('boards'))
+
+
+@login_required
+def delete_topic(request, topic_id):
+    """ Delete a topic """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    topic = get_object_or_404(Topic, pk=topic_id)
+    topic.delete()
+    messages.success(request, 'Topic deleted!')
+    return redirect(reverse('boards'))

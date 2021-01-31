@@ -23,25 +23,26 @@
                 
                     <!-- Full blog article -->
                     <div class="row">
+
                         <div class="col-12 col-md-4 mx-auto pb-3">
                             <img class="img-fluid border border-white" src="{{ article.image.url }}">
                         </div>
+
                         <div class="col-12 col-md-8">
                             <p class="text-muted">Posted by: {{ article.author }} | {{ article.date }}</p>
                             <p class="text-white">{{ article.body }}</p>
 
-                            <!-- Show edit / delete article links to admin -->
+                            <!-- Show edit / delete article links to superuser -->
                             {% if request.user.is_superuser %}
                             <small>
                                 <a href="{% url 'edit_article' article.id %}">Edit</a> | 
                                 <a class="text-danger" href="{% url 'delete_article' article.id %}">Delete</a>
                             </small>
                             {% endif %}
-                        </div>
+                        </div>    
                         
                     </div>
 
-                    <!-- Navigation -->
                     <div>
                         <a href="{% url 'blog' %}" class="btn btn-info btn-lg border border-white rounded-0" role="button" aria-disabled="true"><i class="fas fa-chevron-left"></i> Back to Blog</a>
                     </div>

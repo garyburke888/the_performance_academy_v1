@@ -21,53 +21,58 @@
             <div class="row">
                 <div class="col-10 col-lg-8 mt-3 mx-auto">
 
-                                        <div class="row">
+                    <div class="row">
                         <div class="col text-center">
                             <h2 class="logo-font mb-4 text-white">Boards</h2>
                         </div>
                     </div>
 
-  <table class="table table-dark">
-    <thead class="thead-inverse">
-      <tr>
-        <th>Board</th>
-        <th>Posts</th>
-        <th>Topics</th>
-        <th>Last Post</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for board in boards %}
-        <tr>
-          <td>
-            <a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a>
-            <small class="text-muted d-block">{{ board.description }}</small>
-          </td>
-          <td class="align-middle">
-            {{ board.get_posts_count }}
-          </td>
-          <td class="align-middle">
-            {{ board.topics.count }}
-          </td>
-          <td class="align-middle">
-            {% with post=board.get_last_post %}
-              {% if post %}
-                <small>
-                  <a href="{% url 'topic_posts' board.pk post.topic.pk %}">
-                    By {{ post.created_by.username }} {{ post.created_at|naturaltime }}
-                  </a>
-                </small>
-              {% else %}
-                <small class="text-muted">
-                  <em>No posts yet.</em>
-                </small>
-              {% endif %}
-            {% endwith %}
-          </td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+                    <table class="table table-dark">
+                        <thead class="thead-inverse">
+                        <tr>
+                            <th>Board</th>
+                            <th>Posts</th>
+                            <th>Topics</th>
+                            <th>Last Post</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for board in boards %}
+                            <tr>
+                            <td>
+                                <a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a>
+                                <small class="text-muted d-block">{{ board.description }}
+                                    <!-- Show delete board link to superuser -->
+                                    {% if request.user.is_superuser %}
+                                    <a class="text-danger" href="{% url 'delete_board' board.id %}">Delete</a>
+                                    {% endif %}
+                                </small>
+                            </td>
+                            <td class="align-middle">
+                                {{ board.get_posts_count }}
+                            </td>
+                            <td class="align-middle">
+                                {{ board.topics.count }}
+                            </td>
+                            <td class="align-middle">
+                                {% with post=board.get_last_post %}
+                                {% if post %}
+                                    <small>
+                                    <a href="{% url 'topic_posts' board.pk post.topic.pk %}">
+                                        By {{ post.created_by.username }} {{ post.created_at|naturaltime }}
+                                    </a>
+                                    </small>
+                                {% else %}
+                                    <small class="text-muted">
+                                    <em>No posts yet.</em>
+                                    </small>
+                                {% endif %}
+                                {% endwith %}
+                            </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

@@ -11,36 +11,41 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container-fluid pb-5 bg-black">
+        <div class="container-fluid pb-5 bg-black">
+            <div class="row">
+                <div class="col-12 col-lg-10 mt-3 mx-auto">
 
-         <div class="row">
-            <div class="col-12 col-lg-10 mt-3 mx-auto">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h2 class="logo-font mb-4 text-white">Edit Article</h2>
+                        </div>
+                    </div>
 
-        <div class="row">
-            <div class="col text-center">
-                <h2 class="logo-font mb-4 text-white">Edit Article</h2>
+                    <div class="row">
+                        <div class="col-12 col-md-6 mx-auto">
+
+                            <!-- Edit article -->
+                            <form method="POST" action="{% url 'edit_article' article.id %}" class="form mb-2" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                {% for field in form %}
+                                    {% if field.name != 'image' %}
+                                        {{ field | as_crispy_field }}
+                                    {% else %}
+                                        {{ field }}
+                                    {% endif %}
+                                {% endfor %}
+                                <div class="text-right">
+                                    <a class="btn btn-info border border-white rounded-0" href="{% url 'blog' %}">Cancel</a>
+                                    <button class="btn btn-info border border-white rounded-0" type="submit">Update Article</button>
+                                </div>
+                            </form>
+
+                        </div>            
+                    </div>
+    
+                </div>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-12 col-md-6 mx-auto">
-                <form method="POST" action="{% url 'edit_article' article.id %}" class="form mb-2" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {% for field in form %}
-                        {% if field.name != 'image' %}
-                            {{ field | as_crispy_field }}
-                        {% else %}
-                            {{ field }}
-                        {% endif %}
-                    {% endfor %}
-                    <div class="text-right">
-                        <a class="btn btn-info border border-white rounded-0" href="{% url 'blog' %}">Cancel</a>
-                        <button class="btn btn-info border border-white rounded-0" type="submit">Update Article</button>
-                    </div>
-                </form>
-            </div>            
-        </div>
-    </div>
 {% endblock %}
 
 {% block postloadjs %}

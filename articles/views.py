@@ -6,8 +6,6 @@ from .models import Article
 
 from .forms import ArticleForm
 
-# Create your views here.
-
 
 class ArticleListView(ListView):
     model = Article
