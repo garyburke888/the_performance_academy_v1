@@ -141,4 +141,3 @@ def delete_class(request, class_id):
     a_class.delete()
     messages.success(request, 'Class deleted!')
     return redirect(reverse('classes'))
-

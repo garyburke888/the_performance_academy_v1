@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView, DetailView
@@ -43,3 +43,16 @@ def add_article(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_article(request, article_id):
+    """ Delete an article from the blog """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    article = get_object_or_404(Article, pk=article_id)
+    article.delete()
+    messages.success(request, 'Article deleted!')
+    return redirect(reverse('blog'))
