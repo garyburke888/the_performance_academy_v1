@@ -33,6 +33,7 @@
 
   <div class="mb-4">
     <a href="{% url 'reply_topic' topic.board.pk topic.pk %}" class="btn btn-info border border-white rounded-0" role="button">Reply</a>
+    <a href="{% url 'board_topics' topic.board.pk %}" class="btn btn-info border border-white rounded-0" role="button">Back to All Topics</a>
   </div>
 
   {% for post in posts %}

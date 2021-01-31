@@ -24,12 +24,13 @@
 
                                         <div class="row">
                         <div class="col text-center">
-                            <h2 class="logo-font mb-4 text-white">Topics</h2>
+                            <h2 class="logo-font mb-4 text-white">{{ board.name }} Topics</h2>
                         </div>
                     </div>
 
   <div class="mb-4">
     <a href="{% url 'new_topic' board.pk %}" class="btn btn-info border border-white rounded-0">New topic</a>
+    <a href="{% url 'boards' %}" class="btn btn-info border border-white rounded-0" role="button">Back to All Boards</a>
   </div>
 
   <table class="table table-dark">

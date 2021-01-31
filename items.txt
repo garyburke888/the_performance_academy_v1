@@ -1,5 +1,4 @@
 Remove user images from boards.
-Boards - allow superuser to delete topics etc, maybe from admin.
 Blog, try add view next / previous posts.
 Add and complete Django testing.
 Webhooks not working, from Stripe (401 error).
