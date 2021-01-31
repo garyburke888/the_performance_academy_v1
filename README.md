@@ -99,7 +99,7 @@ Here are the designs I made for the site:
 -   **Add Article page** - An 'post to blog' link appears in the 'account' dropdown menu item allowing superuser to add a new article to the blog by way of a form featuring author, title, body, date and image input fields.
 -   **Edit/Delete (Article)** - If superuser is logged in, edit and delete links appear on each blog detail page for quick access to these functions.
 -   **Edit Article page** - Features the same form as the 'add article' page but is pre-populated with the current information of that particluar blog artice.
--   **Delete Board / Topic** - If superuser is logged in, a delete link appears beside each board and topic in the boards app for quick access to this function.
+-   **Delete Board / Topic / Post** - If superuser is logged in, a delete link appears beside each board, topic and post in the boards app for quick access to this function and to enable proper moderation.
 
 ## Technologies Used
 
