@@ -46,6 +46,35 @@ def add_article(request):
 
 
 @login_required
+def edit_article(request, article_id):
+    """ Edit an article in the blog """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    article = get_object_or_404(Article, pk=article_id)
+    if request.method == 'POST':
+        form = ArticleForm(request.POST, request.FILES, instance=article)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated article!')
+            return redirect(reverse('blog_detail', args=[article.id]))
+        else:
+            messages.error(request, 'Failed to update article. Please ensure the form is valid.')
+    else:
+        form = ArticleForm(instance=article)
+        messages.info(request, f'You are editing {article.title}')
+
+    template = 'articles/edit_article.html'
+    context = {
+        'form': form,
+        'article': article,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
 def delete_article(request, article_id):
     """ Delete an article from the blog """
     if not request.user.is_superuser:
