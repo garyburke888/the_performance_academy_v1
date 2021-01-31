@@ -130,7 +130,7 @@ def delete_board(request, board_id):
     """ Delete a board """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        return redirect(reverse('boards'))
 
     board = get_object_or_404(Board, pk=board_id)
     board.delete()
@@ -143,9 +143,22 @@ def delete_topic(request, topic_id):
     """ Delete a topic """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        return redirect(reverse('boards'))
 
     topic = get_object_or_404(Topic, pk=topic_id)
     topic.delete()
     messages.success(request, 'Topic deleted!')
+    return redirect(reverse('boards'))
+
+
+@login_required
+def delete_post(request, post_id):
+    """ Delete a post """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('boards'))
+
+    post = get_object_or_404(Post, pk=post_id)
+    post.delete()
+    messages.success(request, 'Post deleted!')
     return redirect(reverse('boards'))

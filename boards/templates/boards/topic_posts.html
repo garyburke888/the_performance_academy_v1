@@ -56,11 +56,17 @@
               </div>
             </div>
             {{ post.get_message_as_markdown }}
+            <!-- Allow user who created this post to edit it -->
             {% if post.created_by == user %}
               <div class="mt-3">
                 <a href="{% url 'edit_post' post.topic.board.pk post.topic.pk post.pk %}"
-                   class="btn btn-primary btn-sm"
+                   class="btn btn-info border border-black rounded-0 btn-sm"
                    role="button">Edit</a>
+            {% endif %}
+            {% if request.user.is_superuser %}
+                <a href="{% url 'delete_post' post.id %}"
+                   class="btn btn-danger border border-black rounded-0 btn-sm"
+                   role="button">Delete</a>
               </div>
             {% endif %}
           </div>

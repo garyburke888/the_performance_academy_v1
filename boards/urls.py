@@ -15,4 +15,6 @@ urlpatterns = [
          views.delete_board, name='delete_board'),
     path('delete/topics/<int:topic_id>/',
          views.delete_topic, name='delete_topic'),
+    path('delete/posts/<int:post_id>/',
+         views.delete_post, name='delete_post'),
 ]
