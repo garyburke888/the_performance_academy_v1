@@ -7,8 +7,6 @@ from django.db.models.functions import Lower
 from .models import Class, Category
 from .forms import ClassForm
 
-# Create your views here.
-
 
 def all_classes(request):
     """ A view to show all classes, including sorting and search queries """

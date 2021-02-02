@@ -2,13 +2,7 @@ Definitely:
 
 Add and complete Django testing.
 Emails do not send yet (currently they are based on webhooks).
-Clean up all indentation on all files, mainly divs.
-Clean up CSS file, there's some odd quotes in there.
 Add screenshots of add, edit and delete article functionality in blog.
-Remove breadcrumbs from boards.
-Comments needed throughout.
-Edit ballet classes to contain Grade title, to help with searching.
-Add comment to the js code where images are uploaded - check course for full details here.
 
 Maybe:
 

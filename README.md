@@ -69,7 +69,7 @@ Here are the designs I made for the site:
     -   Dancing classes in the following categories: Ballet, Hip Hop, Tap, Ballroom, Musical Theatre or all dancing.
     -   Acting classes in the following categories: Stage, Screen, Improv, Musical Theatre or all acting.
     -   Instrument classes in the following categories: Piano, Guitar, Bass Guitar, Drums, Ukulele or all instruments.
--   **Mian Nav Search Box** - Always visible, some info on how this works...
+-   **Mian Nav Search Box** - Always visible. Searches class names and descriptions using Django models object 'Q' to handle the users query in the database.
 -   **Main Nav Account** - Always visible dropdown menu to register or login.
 -   **Main Nav Shopping Bag** - Always visible link to the session users shopping bag, which also contains the current total cost of items in the bag.
 -   **Discount Banner** - Always visible to remind users they can recieve a discount by booking more than 1 class.
@@ -163,7 +163,7 @@ This project was created using Github. From there I used Gitpod to write my code
 ## Credits
 
 ### Tutorials
--   This app was built in conjunction with The Code Institute 'Fullstack Frameworks with Django' module.
+-   This app was built in conjunction with The Code Institute 'Full Stack Frameworks With Django' module.
 -   [Tutorial 1](https://www.pythonistaplanet.com/how-to-create-blog-using-django/) - used to help create the 'Blog' app.
 -   [Tutorial 2](https://simpleisbetterthancomplex.com/series/2017/09/04/a-complete-beginners-guide-to-django-part-1.html) - used to help create the 'Boards' app.
 
