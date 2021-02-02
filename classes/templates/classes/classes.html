@@ -15,6 +15,7 @@
         <div class="row">
             <div class="col text-center mt-3">
                 <h2 class="logo-font text-white">Classes</h2>
+                    <!-- Show category badges -->
                     {% for c in current_categories %}
                         <a class="category-badge text-decoration-none" href="{% url 'classes' %}?category={{ c.name }}">
                             <span class="p-2 mt-2 badge badge-info text-white rounded-0 border border-white">{{ c.friendly_name }}</span>
@@ -160,12 +161,14 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <!-- Scroll back to top -->
     <script type="text/javascript">
 		$('.btt-link').click(function(e) {
 			window.scrollTo(0,0)
 		})
 	</script>
     
+    <!-- Sort and select -->
     <script type="text/javascript">
         $('#sort-selector').change(function() {
             var selector = $(this);

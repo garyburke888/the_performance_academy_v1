@@ -11,12 +11,12 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container-fluid bg-black">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <div class="image-container my-5 ci-container">
-                    {% if class.image %}
-                        <img class="card-img-top img-fluid ci-image" src="{{ class.image.url }}" alt="{{ class.name }}">
+        <div class="container-fluid bg-black">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                    <div class="image-container my-5 ci-container">
+                        {% if class.image %}
+                            <img class="card-img-top img-fluid ci-image" src="{{ class.image.url }}" alt="{{ class.name }}">
 
                             <!-- Class image overlay fade -->
                             <div class="ci-overlay">
@@ -25,7 +25,7 @@
                                 </div>
                             </div>
 
-                    {% else %}
+                        {% else %}
                             <img class="card-img-top img-fluid ci-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ class.name }}">
                     
                             <!-- Class image overlay fade -->
@@ -35,110 +35,111 @@
                                 </div>
                             </div>
 
-                    {% endif %}
+                        {% endif %}
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="class-details-container mb-5 mt-md-5">
-                    
-                    <p class="font-weight-bold text-white">
-                        {{ class.name }} | {{ class.setting }} Class for {{ class.age }}
-                    </p>
-                    <hr>                    
-                    <p class="text-white">
-                        {{ class.description }}
-                    </p>
-                    <p class="small text-muted">
-                        Class Teacher: {{ class.teacher }}
-                    </p>
-                    <hr>
-                    <p class="text-white">
-                        €{{ class.price }} | {{ class.term }}
-                    </p>
-                    
-                    <!-- Check for and display class category -->
-                    {% if class.category %}
-                    <p class="small mt-1 mb-0">
-                        <a class="text-muted" href="{% url 'classes' %}?category={{ class.category.name }}">
-                            <i class="fas fa-tag mr-1"></i>{{ class.category.friendly_name }}
-                        </a>
-                    </p>
-                    {% endif %}
-                    
-                    <!-- Display edit and delete buttons for admin -->
-                    {% if request.user.is_superuser %}
-                        <small class="ml-3">
-                            <a href="{% url 'edit_class' class.id %}">Edit</a> | 
-                            <a class="text-danger" href="{% url 'delete_class' class.id %}">Delete</a>
-                        </small>
-                    {% endif %}
-                    <hr>
 
-                    <form class="form" action="{% url 'add_to_bag' class.id %}" method="POST">
-                        {% csrf_token %}
-                        <div class="form-row">
+                <!-- Class details -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="class-details-container mb-5 mt-md-5">
+                        
+                        <p class="font-weight-bold text-white">
+                            {{ class.name }} | {{ class.setting }} Class for {{ class.age }}
+                        </p>
+                        <hr>                    
+                        <p class="text-white">
+                            {{ class.description }}
+                        </p>
+                        <p class="small text-muted">
+                            Class Teacher: {{ class.teacher }}
+                        </p>
+                        <hr>
+                        <p class="text-white">
+                            €{{ class.price }} | {{ class.term }}
+                        </p>
+                        
+                        <!-- Check for and display class category -->
+                        {% if class.category %}
+                        <p class="small mt-1 mb-0">
+                            <a class="text-muted" href="{% url 'classes' %}?category={{ class.category.name }}">
+                                <i class="fas fa-tag mr-1"></i>{{ class.category.friendly_name }}
+                            </a>
+                        </p>
+                        {% endif %}
+                        
+                        <!-- Display edit and delete buttons for admin -->
+                        {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a href="{% url 'edit_class' class.id %}">Edit</a> | 
+                                <a class="text-danger" href="{% url 'delete_class' class.id %}">Delete</a>
+                            </small>
+                        {% endif %}
+                        <hr>
 
-                            {% with class.is_weekdays as w %}
-                            {% if w %}
+                        <form class="form" action="{% url 'add_to_bag' class.id %}" method="POST">
+                            {% csrf_token %}
+                            <div class="form-row">
+
+                                {% with class.is_weekdays as w %}
+                                {% if w %}
+                                    <div class="col-12">
+                                        <p class="text-white"><strong>Day Preference:</strong></p>
+                                        <select class="form-control rounded-0 w-50 border border-white" name="class_day" id="id_class_day">
+                                            <option value="monday" selected>Monday</option>
+                                            <option value="tuesday">Tuesday</option>
+                                            <option value="wednesday">Wednesday</option>
+                                            <option value="thursday">Thursday</option>
+                                            <option value="friday">Friday</option>
+                                        </select>
+                                    </div>
+                                {% endif %}
+                                {% endwith %}
+
                                 <div class="col-12">
-                                    <p class="text-white"><strong>Day Preference:</strong></p>
-                                    <select class="form-control rounded-0 w-50 border border-white" name="class_day" id="id_class_day">
-                                        <option value="monday" selected>Monday</option>
-                                        <option value="tuesday">Tuesday</option>
-                                        <option value="wednesday">Wednesday</option>
-                                        <option value="thursday">Thursday</option>
-                                        <option value="friday">Friday</option>
-                                    </select>
-                                </div>
-                            {% endif %}
-                            {% endwith %}
-
-                            <div class="col-12">
-                                <p class="mt-3 text-white"><strong>Quantity:</strong></p>
-                                <div class="form-group w-50">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-info rounded-0 border border-white border" 
-                                                data-item_id="{{ class.id }}" id="decrement-qty_{{ class.id }}">
-                                                <span class="icon">
-                                                    <i class="fas fa-minus"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                        <input class="form-control qty_input border border-white rounded-0" type="number"
-                                            name="quantity" value="1" min="1" max="99"
-                                            data-item_id="{{ class.id }}"
-                                            id="id_qty_{{ class.id }}">
-                                        <div class="input-group-append">
-                                            <button class="increment-qty btn btn-info rounded-0 border border-white"
-                                                data-item_id="{{ class.id }}" id="increment-qty_{{ class.id }}">
-                                                <span class="icon">
-                                                    <i class="fas fa-plus"></i>
-                                                </span>
-                                            </button>
+                                    <p class="mt-3 text-white"><strong>Quantity:</strong></p>
+                                    <div class="form-group w-50">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn btn-info rounded-0 border border-white border" 
+                                                    data-item_id="{{ class.id }}" id="decrement-qty_{{ class.id }}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-minus"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <input class="form-control qty_input border border-white rounded-0" type="number"
+                                                name="quantity" value="1" min="1" max="99"
+                                                data-item_id="{{ class.id }}"
+                                                id="id_qty_{{ class.id }}">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn btn-info rounded-0 border border-white"
+                                                    data-item_id="{{ class.id }}" id="increment-qty_{{ class.id }}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-plus"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="col-12 mt-2">
+                                    <a href="{% url 'classes' %}" class="btn btn-lg btn-info rounded-0 mt-5 border border-white">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="text-uppercase">Keep Shopping</span>
+                                    </a>
+                                    <input type="submit" class="btn btn-lg btn-info rounded-0 text-uppercase mt-5 border border-white" value="Add to Bag">
+                                </div>
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+
                             </div>
-
-                            <div class="col-12 mt-2">
-                                <a href="{% url 'classes' %}" class="btn btn-lg btn-info rounded-0 mt-5 border border-white">
-                                    <span class="icon">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="text-uppercase">Keep Shopping</span>
-                                </a>
-                                <input type="submit" class="btn btn-lg btn-info rounded-0 text-uppercase mt-5 border border-white" value="Add to Bag">
-                            </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
-
-
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 {% endblock %}
 
 {% block postloadjs %}
