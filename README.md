@@ -139,6 +139,7 @@ Here are the designs I made for the site:
 -   [Pylint](https://www.pylint.org/) to analyse and validate Python code.
 
 ### Testing User Stories from User Experience (UX) Section
+-   
 
 ### Site UI/UX & Browser Compatibility Testing
 -   Manual testing was carried out on this site by the developer's family members to review the UX and site responsivness.
