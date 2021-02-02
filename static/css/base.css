@@ -35,46 +35,17 @@ hr {
     width: fit-content;
 }
 
-.shop-now-button {
+.find-a-class-button {
     background: white;
     color: black;
     min-width: 260px;
 }
 
-.btn-black {
-    background: black;
-    color: white;
-}
-
-.btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
-}
-
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    background: black;
-    color: white !important;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
+.find-a-class-button:hover,
+.find-a-class-button:active,
+.find-a-class-button:focus {
     background: #222;
     color: white;
-}
-
-.text-black {
-    color: #000 !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
 }
 
 .bg-purple {
@@ -95,7 +66,6 @@ a.category-badge > span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
 }
-
 
 .btt-button {
     height: 42px;
@@ -215,7 +185,6 @@ input[name='q']::placeholder {
 
 .ci-text {
   color: white;
-  
   position: absolute;
   top: 50%;
   left: 50%;
@@ -281,13 +250,6 @@ input[name='q']::placeholder {
 }
 
 /* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens 
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-} */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {

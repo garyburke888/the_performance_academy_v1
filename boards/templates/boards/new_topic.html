@@ -9,36 +9,25 @@
     </div>
 {% endblock %}
 
-{% block title %}Start a New Topic{% endblock %}
-
-{% block breadcrumb %}
-  <li class="breadcrumb-item"><a href="{% url 'home' %}">Boards</a></li>
-  <li class="breadcrumb-item"><a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a></li>
-  <li class="breadcrumb-item active">New topic</li>
-{% endblock %}
-
 {% block content %}
-
     <div class="overlay"></div>
         <div class="container-fluid pb-5 bg-black">
             <div class="row">
                 <div class="col-10 col-lg-8 mt-3 mx-auto">
 
-                                        <div class="row">
+                    <div class="row">
                         <div class="col text-center">
                             <h2 class="logo-font mb-4 text-white">New Topic</h2>
                         </div>
                     </div>
 
-
-  <form method="post" novalidate>
-    {% csrf_token %}
-    {% include 'includes/form.html' %}
-    <button type="submit" class="btn btn-info border border-white rounded-0">Post</button>
-  </form>
+                    <form method="post" novalidate>
+                        {% csrf_token %}
+                        {% include 'includes/form.html' %}
+                        <button type="submit" class="btn btn-info border border-white rounded-0">Post</button>
+                    </form>
 
                 </div>
             </div>
         </div>
-        
 {% endblock %}

@@ -9,8 +9,6 @@
     </div>
 {% endblock %}
 
-{% block title %}Edit post{% endblock %}
-
 {% block stylesheet %}
   <link rel="stylesheet" href="{% static 'css/simplemde.min.css' %}">
 {% endblock %}
@@ -22,34 +20,25 @@
   </script>
 {% endblock %}
 
-{% block breadcrumb %}
-  <li class="breadcrumb-item"><a href="{% url 'home' %}">Boards</a></li>
-  <li class="breadcrumb-item"><a href="{% url 'board_topics' post.topic.board.pk %}">{{ post.topic.board.name }}</a></li>
-  <li class="breadcrumb-item"><a href="{% url 'topic_posts' post.topic.board.pk post.topic.pk %}">{{ post.topic.subject }}</a></li>
-  <li class="breadcrumb-item active">Edit post</li>
-{% endblock %}
-
 {% block content %}
-
     <div class="overlay"></div>
         <div class="container-fluid pb-5 bg-black">
             <div class="row">
                 <div class="col-10 col-lg-8 mt-3 mx-auto">
 
-                                        <div class="row">
+                    <div class="row">
                         <div class="col text-center">
                             <h2 class="logo-font mb-4 text-white">Edit Post</h2>
                         </div>
                     </div>
 
-  <form method="post" class="mb-4" novalidate>
-    {% csrf_token %}
-    {% include 'includes/form.html' %}
-    <button type="submit" class="btn btn-info border border-white rounded-0">Save changes</button>
-    <a href="{% url 'topic_posts' post.topic.board.pk post.topic.pk %}" class="btn btn-info border border-white rounded-0" role="button">Cancel</a>
-  </form>
+                    <form method="post" class="mb-4" novalidate>
+                        {% csrf_token %}
+                        {% include 'includes/form.html' %}
+                        <button type="submit" class="btn btn-info border border-white rounded-0">Save changes</button>
+                        <a href="{% url 'topic_posts' post.topic.board.pk post.topic.pk %}" class="btn btn-info border border-white rounded-0" role="button">Cancel</a>
+                    </form>
                 </div>
             </div>
         </div>
-        
 {% endblock %}
