@@ -126,7 +126,8 @@ Here are the designs I made for the site:
 ## Testing
 
 ### Django Testing
--   
+-   **Articles App** - Django tests were written and implemented for the forms, models and  views in the Articles app.
+-   **Boards App** - Django tests were written and implemented for...
 
 ### Defensive Design Testing
 -   As detailed above all features have been designed with the consideration to the session user to manage the user actions and visibility.
