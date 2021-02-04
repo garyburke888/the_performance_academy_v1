@@ -34,7 +34,7 @@
                                     <a href="{% url 'blog_detail' i.pk %}" class="btn btn-info">Read more</a>
                                 </div>
                                 <div class="card-footer">
-                                    <p class="text-muted">Posted by: {{ i.author }} | {{ i.date }}</p>
+                                    <small>Posted by:<br>{{ i.author }}<br>{{ i.date }}</small>
                                 </div>
                              </div>
                         {% endfor %}

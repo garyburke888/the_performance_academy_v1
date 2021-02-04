@@ -12,5 +12,7 @@ Webhooks not working, from Stripe (401 error).
 
 Mentor Queries:
 
-Django tests - how to better test when login is required (Articles & Boards apps)
+Django testing - how to better test when login is required (Articles & Boards apps)
+Django testing - should I be aiming for 100% coverage?
+Django testing - test 2 in articles test_models not correct result
 In settings.py, ask about the secret key
