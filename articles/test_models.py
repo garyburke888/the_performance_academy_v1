@@ -7,7 +7,12 @@ from .models import Article
 
 class TestModels(TestCase):
 
-    def test_author_field_must_be_user_instance(self):
-        article = Article()
-        article.title = 'hello'
-        self.assertRaises(ValidationError)
+    def test_title_field_cannot_be_empty(self):
+        article = Article(
+            title='',
+            body='here is some text',
+            date='2021-01-01',
+            image='noimage2.png'
+        )
+        article.full_clean()
+        self.assertRaises(ValidationError, article.full_clean)
