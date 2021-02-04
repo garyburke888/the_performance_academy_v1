@@ -8,6 +8,8 @@ from .models import Article
 class TestModels(TestCase):
 
     def test_title_field_cannot_be_empty(self):
+        """ Raise validation error it title field
+        is left blank """
         article = Article(
             title='',
             body='here is some text',
@@ -16,3 +18,9 @@ class TestModels(TestCase):
         )
         article.full_clean()
         self.assertRaises(ValidationError, article.full_clean)
+
+    def test_string_representation(self):
+        """ Ensure that a blog entry’s string
+        representation is equal to its title """
+        entry = Article(title="My entry title")
+        self.assertEqual(str(entry), entry.title)
