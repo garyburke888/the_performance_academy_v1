@@ -9,3 +9,8 @@ Maybe:
 Remove user images from boards.
 Blog, try add view next / previous posts.
 Webhooks not working, from Stripe (401 error).
+
+Mentor Queries:
+
+Django tests - how to better test when login is required (Articles & Boards apps)
+In settings.py, ask about the secret key

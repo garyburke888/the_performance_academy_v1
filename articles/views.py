@@ -19,10 +19,10 @@ class ArticleDetailView(DetailView):
 
 @login_required
 def add_article(request):
-    """ Add an article to the blog """
+    """ Add an article to the blog, only available to superuser """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        return redirect(reverse('blog'))
 
     if request.method == 'POST':
         form = ArticleForm(request.POST, request.FILES)
@@ -45,10 +45,10 @@ def add_article(request):
 
 @login_required
 def edit_article(request, article_id):
-    """ Edit an article in the blog """
+    """ Edit an article in the blog, only available to superuser """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        return redirect(reverse('blog'))
 
     article = get_object_or_404(Article, pk=article_id)
     if request.method == 'POST':
@@ -74,10 +74,10 @@ def edit_article(request, article_id):
 
 @login_required
 def delete_article(request, article_id):
-    """ Delete an article from the blog """
+    """ Delete an article from the blog, only available to superuser """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        return redirect(reverse('blog'))
 
     article = get_object_or_404(Article, pk=article_id)
     article.delete()

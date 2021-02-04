@@ -1,6 +1,8 @@
 from django.test import TestCase
 from .forms import ArticleForm
 
+# Create your tests here.
+
 
 class TestArticleForm(TestCase):
 
