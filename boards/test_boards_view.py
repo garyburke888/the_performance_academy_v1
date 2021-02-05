@@ -9,7 +9,7 @@ class BoardsTests(TestCase):
     def setUp(self):
         """ Create a new test board """
         self.board = Board.objects.create(
-            name='Django', description='Django board.')
+            name='Test', description='Test board.')
         url = reverse('boards')
         self.response = self.client.get(url)
 
