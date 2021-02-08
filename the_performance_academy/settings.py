@@ -26,7 +26,7 @@ SECRET_KEY = '3j@8*(6xc$#26w8r=7#om8plz$_(8q@(wln#&-3w71_ksbwo6#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['the-performance-academy.herokuapp.com', 'localhost']
 
 
 # Application definition

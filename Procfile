@@ -1,0 +1,1 @@
+web: gunicorn the_performance_academy.wsgi:application

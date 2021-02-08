@@ -171,6 +171,14 @@ This project was created using Github. From there I used Gitpod to write my code
 -   Migrate these changes with the 'python3 manage.py migrate' command.
 -   Run 'python3 manage.py loaddata xxx' command for each fixtures, filling in each fixture name where the xxx is, in the correct order.
 -   Run 'python3 manage.py createsuperuser' command and follow the prompts.
+-   Remove Heroku database url from setting.py and create 'if statement' for database depending on where the site is running.
+-   Run 'pip3 install gunicorn' which will act as the new webserver.
+-   Run 'pip3 freeze > requirements.txt' again.
+-   Create 'Procfile' to tell Heroku to create a web dyno, which will run gunicorn and serve our django app.
+-   Log into Heroku from the command line using 'heroku login -i' and then entering requested credentials.
+-   Run 'heroku config:set DISABLE_COLLECTSTATIC=1' command so that static files won't be colleted when we deploy.
+-   Add Heroku link to 'allowed' hosts in settings.py.
+-   
 
 ## Credits
 
