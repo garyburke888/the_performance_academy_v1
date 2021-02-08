@@ -177,7 +177,10 @@ This project was created using Github. From there I used Gitpod to write my code
 -   Create 'Procfile' to tell Heroku to create a web dyno, which will run gunicorn and serve our django app.
 -   Log into Heroku from the command line using 'heroku login -i' and then entering requested credentials.
 -   Run 'heroku config:set DISABLE_COLLECTSTATIC=1' command so that static files won't be colleted when we deploy.
--   Add Heroku link to 'allowed' hosts in settings.py.
+-   Add Heroku link to 'allowed' hosts in settings.py, as well as 'localhost' to allow gitpod to work also.
+-   Run 'heroku git:remote - a the-performance-academy' to initilise heroku git remote.
+-   Run 'git push heroku master' to finalise deployment to Heroku.
+-   Setup automatic deployment in the Heroku dashboard under the 'deploy' tab by clicking 'GitHub' in the 'Deply Method' section and searching for correct repo.
 -   
 
 ## Credits
