@@ -188,6 +188,12 @@ I've used Amazon AWS for cloud-based storage of my static and image files, set u
 -   Under properties for this bucket, enable static website hosting.
 -   Under permissions, update CORS configuration, generate a security policy (S3 Bucket policy with all principals and 'get object action'.
 -   Under access control list give access to 'list objects' for everyone.
+-   Through IAM create a new group with an 's3 full access policy' and within that group create a new user with programmatic access.
+-   Install boto3 and django-storages in git.
+-   Add Bucket config information to settings.py.
+-   Create custom_storages file to tell django that in production we want to use s3 to store our static files whenever someone runs collectstatic.
+-   In settings.py tell django that for static file storage we want to use our storage class we just created and that the location it should save static files is a folder called static.
+-   Do the same thing for media files.
 -   
 
 ## Credits
