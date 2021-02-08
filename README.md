@@ -181,7 +181,8 @@ This project was created using Github. From there I used Gitpod to write my code
 -   Run 'heroku git:remote - a the-performance-academy' to initilise heroku git remote.
 -   Run 'git push heroku master' to finalise deployment to Heroku.
 -   Setup automatic deployment in the Heroku dashboard under the 'deploy' tab by clicking 'GitHub' in the 'Deply Method' section and searching for correct repo.
--   
+
+I've used Amazon AWS for...
 
 ## Credits
 
