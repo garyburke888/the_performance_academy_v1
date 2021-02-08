@@ -8,8 +8,8 @@ from .models import Article
 class TestModels(TestCase):
 
     def test_title_field_cannot_be_empty(self):
-        """ Raise validation error it title field
-        is left blank """
+        """ Raise validation error if title field
+        is left blank, this test is currently failing """
         article = Article(
             title='',
             body='here is some text',

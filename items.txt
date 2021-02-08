@@ -1,18 +1,17 @@
 Definitely:
-
-Add and complete Django testing.
-Emails do not send yet (currently they are based on webhooks).
+Go to checkout button CSS gone.
+Emails do not send yet (currently they are based on webhooks, might work after deployment).
 Add screenshots of add, edit and delete article functionality in blog.
+Add tests and expected results, including plenty of screenshots to README.
 
 Maybe:
-
 Remove user images from boards.
 Blog, try add view next / previous posts.
 Webhooks not working, from Stripe (401 error).
 
 Mentor Queries:
-
-Django testing - how to better test when login is required (Articles & Boards apps)
+Django - how to address this in the README?
+Django testing - first test in articles test_models not correct result.
 Django testing - should I be aiming for 100% coverage?
-Django testing - test 2 in articles test_models not correct result
-In settings.py, ask about the secret key
+In settings.py, ask about the secret key.
+Ask about sending emails from site.

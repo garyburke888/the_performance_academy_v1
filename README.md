@@ -126,8 +126,8 @@ Here are the designs I made for the site:
 ## Testing
 
 ### Django Testing
--   **Articles App** - Django tests were written and implemented for the forms, models and  views in the Articles app.
--   **Boards App** - Django tests were written and implemented for...
+-   **Articles App** - Django tests were written and implemented for the forms, models and views files in the Articles app.
+-   **Boards App** - Django tests were written and implemented to test the boards, edit post, new topic, posts, reply topic and topics views in the Boards app.
 
 ### Defensive Design Testing
 -   As detailed above all features have been designed with the consideration to the session user to manage the user actions and visibility.
@@ -160,7 +160,17 @@ Here are the designs I made for the site:
 
 ## Deployment
 This project was created using Github. From there I used Gitpod to write my code. Then I used commits to git followed by pushes to my GitHub repository. I've deployed this project to Heroku. For deployment on Heroku I've used the following steps;
--   step 1...
+-   Within the Heroku dashboard, click 'new' app.
+-   Give it a name and select the 'region' closest to you.
+-   Under 'resources' seacrh postgres and select 'Heroku Postgres'.
+-   Slect the 'free' plan.
+-   Return to GitPod and do 'pip3 install dj_database_url' followed by 'pip3 install psycopg2-binary'.
+-   Freeze these requirments with the 'pip3 freeze > requirements.txt' command.
+-   In settings.py, import dj_database_url.
+-   Copy database url from Heroku settings (under config vars) and paste in into settings.py - instead of the current settings for database.
+-   Migrate these changes with the 'python3 manage.py migrate' command.
+-   Run 'python3 manage.py loaddata xxx' command for each fixtures, filling in each fixture name where the xxx is, in the correct order.
+-   Run 'python3 manage.py createsuperuser' command and follow the prompts.
 
 ## Credits
 
