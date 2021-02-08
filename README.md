@@ -194,6 +194,7 @@ I've used Amazon AWS for cloud-based storage of my static and image files, set u
 -   Create custom_storages file to tell django that in production we want to use s3 to store our static files whenever someone runs collectstatic.
 -   In settings.py tell django that for static file storage we want to use our storage class we just created and that the location it should save static files is a folder called static.
 -   Do the same thing for media files.
+-   Add AWS_S3_OBJECT_PARAMETERS to settings.py to increase time static files are cahced.
 -   
 
 ## Credits
