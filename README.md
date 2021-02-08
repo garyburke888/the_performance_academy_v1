@@ -182,7 +182,13 @@ This project was created using Github. From there I used Gitpod to write my code
 -   Run 'git push heroku master' to finalise deployment to Heroku.
 -   Setup automatic deployment in the Heroku dashboard under the 'deploy' tab by clicking 'GitHub' in the 'Deply Method' section and searching for correct repo.
 
-I've used Amazon AWS for...
+I've used Amazon AWS for cloud-based storage of my static and image files, set up as follows;
+-   Create personal account at aws.amazon.com.
+-   From console, create a new public bucket in the S3 service.
+-   Under properties for this bucket, enable static website hosting.
+-   Under permissions, update CORS configuration, generate a security policy (S3 Bucket policy with all principals and 'get object action'.
+-   Under access control list give access to 'list objects' for everyone.
+-   
 
 ## Credits
 
