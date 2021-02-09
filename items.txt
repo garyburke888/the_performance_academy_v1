@@ -1,7 +1,4 @@
 Definitely:
-Redo all descriptions for all classes, they've disappeared.
-Go to checkout button CSS gone.
-Reformat blog posts - text is too blocky / or redo the css here to put the image on top, centered.
 Emails do not send yet (currently they are based on webhooks, might work after deployment).
 Add screenshots of add, edit and delete article functionality in blog.
 Add tests and expected results, including plenty of screenshots to README.
