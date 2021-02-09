@@ -196,6 +196,7 @@ I've used Amazon AWS for cloud-based storage of my static and image files, set u
 -   Do the same thing for media files.
 -   Add AWS_S3_OBJECT_PARAMETERS to settings.py to increase time static files are cahced.
 -   Upload all mediafiles to AWS.
+-   Update Stripe keys in Heroku settings.
 
 ## Credits
 

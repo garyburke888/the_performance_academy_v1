@@ -1,4 +1,5 @@
 Definitely:
+Redo all descriptions for all classes, they've disappeared.
 Go to checkout button CSS gone.
 Reformat blog posts - text is too blocky / or redo the css here to put the image on top, centered.
 Emails do not send yet (currently they are based on webhooks, might work after deployment).
@@ -14,5 +15,4 @@ Mentor Queries:
 Django - how to address this in the README?
 Django testing - first test in articles test_models not correct result.
 Django testing - should I be aiming for 100% coverage?
-In settings.py, ask about the secret key.
-Ask about sending emails from site.
+*Ask about sending emails from site.
