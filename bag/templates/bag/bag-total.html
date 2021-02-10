@@ -1,6 +1,6 @@
-<h6><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
-<h6>Discount: €{{ discount|floatformat:2 }}</h6>
-<h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
+<h6 class="text-white"><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
+<h6 class="text-white">Discount: €{{ discount|floatformat:2 }}</h6>
+<h4 class="mt-4 text-white"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
 {% if discount_delta > 0 %}
     <p class="mb-1 text-danger">
         You could get a 10% discount by adding <strong>{{ discount_delta }}</strong> more class!

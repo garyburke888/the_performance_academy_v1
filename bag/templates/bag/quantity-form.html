@@ -22,7 +22,7 @@
                     </span>
                 </button>
             </div>
-            {% if item.product.is_weekdays %}
+            {% if item.class.is_weekdays %}
                 <input type="hidden" name="class_day" value="{{ item.day }}">
             {% endif %}
         </div>
