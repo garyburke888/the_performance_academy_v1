@@ -1,15 +1,15 @@
 Definitely:
-Emails do not send yet (currently they are based on webhooks, might work after deployment).
 Add screenshots of add, edit and delete article functionality in blog.
 Add tests and expected results, including plenty of screenshots to README.
 
 Maybe:
+General code refactoring.
 Remove user images from boards.
 Blog, try add view next / previous posts.
 Webhooks not working, from Stripe (401 error).
 
 Mentor Queries:
+Should I be able to view the full site from git? Currently I get an error regarding the secret key.
 Django - how to address this in the README?
 Django testing - first test in articles test_models not correct result.
 Django testing - should I be aiming for 100% coverage?
-*Ask about sending emails from site.

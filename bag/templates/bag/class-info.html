@@ -1,0 +1,3 @@
+<p class="my-0"><strong>{{ item.class.name }}</strong></p>
+<p class="my-0"><strong>Preferred Day: </strong>{% if item.class.is_weekdays %}{{ item.day|upper }}{% else %}N/A{% endif %}</p>
+<p class="my-0 small text-muted">SKU: {{ item.class.sku|upper }}</p>
