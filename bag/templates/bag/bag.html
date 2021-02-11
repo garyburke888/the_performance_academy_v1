@@ -50,8 +50,8 @@
                                             {% include "bag/class-info.html" %}
                                         </div>
                                         <div class="col-12 col-sm-6 order-sm-last">
-                                            <p class="my-0">Price Each: €{{ item.class.price }}</p>
-                                            <p><strong>Subtotal: </strong>€{{ item.class.price | calc_subtotal:item.quantity }}</p>
+                                            <p class="my-0 text-white">Price Each: €{{ item.class.price }}</p>
+                                            <p class="text-white"><strong>Subtotal: </strong>€{{ item.class.price | calc_subtotal:item.quantity }}</p>
                                         </div>
                                         <div class="col-12 col-sm-6">
                                             {% include "bag/quantity-form.html" %}
