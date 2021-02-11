@@ -113,7 +113,9 @@ Here are the designs I made for the site:
 -   [Django](https://www.djangoproject.com/)
     - Django was used to develop the site.
 -   [SQLite](https://www.sqlite.org/)
-    - SQLite (database engine used by default with Django)
+    - SQLite (database used with Django)
+-   [PostgreSQL](https://www.postgresql.org/)
+    - PostgreSQL (database used with Heroku)
 -   [Bootstrap](https://getbootstrap.com/)
     - Bootstrap was used to help with design, layout and responsiveness.
 -   [Font Awesome](https://fontawesome.com/)

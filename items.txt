@@ -3,7 +3,7 @@ Add screenshots of add, edit and delete article functionality in blog.
 Add tests and expected results, including plenty of screenshots to README.
 
 Maybe:
-General code refactoring.
+General code refactoring, ongoing.
 Remove user images from boards.
 Blog, try add view next / previous posts.
 Webhooks not working, from Stripe (401 error).
