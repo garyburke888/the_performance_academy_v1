@@ -181,6 +181,11 @@ STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+STATICFILES_LOCATION = 'static'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+MEDIAFILES_LOCATION = 'media'
+
 # Stripe
 DISCOUNT_THRESHOLD = 2
 STANDARD_DISCOUNT_PERCENTAGE = 10
