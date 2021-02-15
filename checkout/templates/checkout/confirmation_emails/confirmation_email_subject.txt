@@ -1,1 +1,1 @@
-The Performance Academy Confirmation for Order Number {{ order.order_number }}
+The Performance Academy - Confirmation for Order Number {{ order.order_number }}
