@@ -1,7 +1,7 @@
 # The Performance Academy
 [View the live site here.](https://the-performance-academy.herokuapp.com/)
 
-![The Performance Academy](/media/tpa_ss1.png)
+![The Performance Academy](media/tpa_index.jpg)
 
 # User Experience (UX)
 
@@ -102,12 +102,16 @@ For users logged in, they can click on the logout button which takes them to thi
 Admin can post articles to the blog ansd they will show up here, in Bootstrap cards. Article content is truncated and users can click on a 'read more' link to be taken to the full article. From here they can then also click on a 'back to blog' link to get back to the main blog page.
 
 ### Boards Page
+![Boards](media/tpa_boards.jpg)
+
 All users can view the Boards page which is a table with links to all the diffferent boards available. Clicking on a board title will take the user to that boards topic page, where a bunch of topics will be listed. A logged in user can add a new topic here. All users can read topic posts by clicking on the topics title. A logged in user can post to a topic or post a reply in a topic. Only a user who created a post, or admin, can delete that post.
 
 ### Site Management
+![Admin Menu](media/tpa_admin_menu.jpg)
+
 This is available only for admin. Once logged in, the Account dropdown menu contains the followings links;
--   Add a class page - to add a new class to the site.
--   Post to blog page - to add a new article to the blog.
+-   Add a class page - to add a new class to the site. [view](media/tpa_add_class.jpg)
+-   Post to blog page - to add a new article to the blog. [view](media/tpa_add_article.jpg)
 
 Separate to these links, edit & delete links show up for admin on all class detail pages and on all blog articles for quick access to these functions.
 
@@ -135,6 +139,8 @@ Here are the designs I made for the site:
 ## Detailed Features
 
 ### Visible to all users
+![Bag with discount message](media/tpa_bag_side.jpg)
+
 -   **Index page** - Upon entering the site the user is greeted by the main nav, a discount banner, a large performing arts background image, a 'New Term Now Enroling' statement and a call-to-action button.
 -   **Main Nav Menu** - The main menu (collapsed on mobile devices) features dropdown lists where the user can select classes and categories as follows;
     -   Classes by age, price, category or all classes.
@@ -220,7 +226,7 @@ Here are the designs I made for the site:
 - [Heroku](https://www.heroku.com/)
 
 # Testing
-A detailed description about the testing process and results can be found in TESTING.md.
+A detailed description about the testing process and results can be found in [TESTING.md](TESTING.md)
 
 # Deployment
 This site is deployed to heroku and the versioning was done with git and the Repository is hosted on Github.
@@ -254,14 +260,11 @@ Official Github Documentation on cloning a repositiory: [Github - Cloning Repos]
 10. Migrate the models and create the database by typing the following commands into the terminal;
     1. ```python3 manage.py makemigrations```  
     2. ```python3 manage.py migrate```
-11. Import the provided fixtures in the following order; 
+11. Import the provided fixtures in the correct order;
     1. ```python3 manage.py loaddata categories```
-    2. ```python3 manage.py loaddata productline```
-    3. ```python3 manage.py loaddata products```
-    4. ```python3 manage.py loaddata proudctsize```
-    5. ```python3 manage.py loaddata productvariants```
-    6. ```python3 manage.py loaddata blog ```
-    7. ```python3 manage.py loaddata faq ```
+    2. ```python3 manage.py loaddata ages```
+    3. ```python3 manage.py loaddata settings```
+    4. ```python3 manage.py loaddata classes```
 12. Create a superuser for accessing the django admin view with the following command:
     ```python3 manage.py createsuperuser``` You will be asked for an email address, username and password.
 13. You should be all set and when using the command ```python3 manage.py runserver``` the project should run.
@@ -290,14 +293,11 @@ This project is deployed to Heroku. For the deployment the following steps were/
 9. Now migrate the models and create the postgres database on heroku by typing the following commands into the terminal;
     1. ```python3 manage.py makemigrations```  
     2. ```python3 manage.py migrate```
-10. To setup the data in the database import the provided fixtures in the following order; 
+10. To setup the data in the database import the provided fixtures in the correct order; 
     1. ```python3 manage.py loaddata categories```
-    2. ```python3 manage.py loaddata productline```
-    3. ```python3 manage.py loaddata products```
-    4. ```python3 manage.py loaddata proudctsize```
-    5. ```python3 manage.py loaddata productvariants```
-    6. ```python3 manage.py loaddata blog ```
-    7. ```python3 manage.py loaddata faq ```
+    2. ```python3 manage.py loaddata ages```
+    3. ```python3 manage.py loaddata settings```
+    4. ```python3 manage.py loaddata classes```
 11. Create a superuser for the Postgres database for accessing the django admin view with the following command:
     ```python3 manage.py createsuperuser``` You will be asked for an email address, username and password.
 12. Log in to heroku from your terminal ```heroku login```

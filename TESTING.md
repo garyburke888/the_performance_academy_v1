@@ -37,7 +37,7 @@ All the following tests have been implemented and passed. Where errors occured t
 2.  Open [The Performance Academy Page](https://the-performance-academy.herokuapp.com/).
 3.  Check that Classes page is opened by clicking the 'Find a Class' button.
 
-## 3. Test Booking/Classes Page
+## 3. Test Classes Page
 
 ### Class Categories
 1.  Open web browser.
@@ -69,6 +69,14 @@ All the following tests have been implemented and passed. Where errors occured t
     -   Add to bag button
     -   Keep shopping button
     -   Quantity field
+
+### Test search Function
+1.  Open web browser.
+2.  Open [The Performance Academy Page](https://the-performance-academy.herokuapp.com/).
+3.  Type 'ballet' into the search box and press enter.
+4.  All ballet classes should display on the classes page, and nothing else.
+5.  Type 'guitar' into the search bar and press enter.
+6.  'Guitar' and 'Bass Guitar' classes should display on the classes page.
 
 ## 4. Test Shopping Bag
 
@@ -201,6 +209,28 @@ All the following tests have been implemented and passed. Where errors occured t
 16. Checkout success page should be shown.
 17. If real email address was used, confirmation email should be recieved.
 
+### Discount - correct application
+1.  Open web browser.
+2.  Open [The Performance Academy Page](https://the-performance-academy.herokuapp.com/).
+3.  Click account icon and login with user details.
+4.  Click on 'Find a Class'.
+5.  Choose any class by clicking the image.
+6.  Add item to bag.
+7.  Side drawer bag should open.
+8.  Bag should contain the message 'Add 1 more class to get a 10% discount!'
+9.  Close bag and add another item.
+10. Side drawer bag should open and not contain discount message.
+
+### Discount - correct amount
+1.  Open web browser.
+2.  Open [The Performance Academy Page](https://the-performance-academy.herokuapp.com/).
+3.  Click account icon and login with user details.
+4.  Click on 'Find a Class'.
+5.  Choose any class by clicking the image.
+6.  Add item to bag.
+7.  Choose another class and add to bag. (make sure you have at least two items in the bag, as the discount applies to bookings of more than one class).
+8.  Grand total should contain a discount of 10%, no matter what classes you have in it.
+
 ## 6. Register
 
 ### Register
@@ -332,7 +362,7 @@ Besides running through the extensive test cycles documented above the URL from 
 -   Ability to actually add user profile images, so they show up in the Boards app for example.
 
 # Django Testing
-In total, 32 Django test were written and implemented - solely for the 'Articles' and 'Boards' apps. These tests are listed below.
+In total, 32 passing Django tests were written and implemented - solely for the 'Articles' and 'Boards' apps. These tests are listed below.
 
 ## Articles App
 -   [Forms](articles/test_forms.py)
@@ -348,7 +378,10 @@ In total, 32 Django test were written and implemented - solely for the 'Articles
 -   [Topics View](boards/test_topics_view.py)
 
 # Known Bugs
--   Webhooks from Stripe not working, this is despite payments being sent to Stripe without issue. Many attempts to resolve this issue, including contacting CodeInstitute tutor support were made, to no avail. Error code - 405 (Method Not Allowed) remains.
+Webhooks from Stripe are not working, this is despite payments being sent to Stripe without issue. Many attempts to resolve this issue, including contacting Code Institute tutor support were made, to no avail. Error code - 405 (Method Not Allowed) remains.
+
+# Development Issues
+An attempt was made to use [AWS](https://aws.amazon.com/) to serve static and media files and though this started out successfully, data limits were somehow reached after only 3 days of hosting (under the free plan) and so it was decided to roll back and try another method to serve these files. WhiteNoise is used instead.
 
 # Code Validators
 
