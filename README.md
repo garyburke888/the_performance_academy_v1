@@ -93,7 +93,7 @@ Here the user can enter their billing details to complete the checkout. If they 
 The users are provided with the option to register/login to create an account. For new users, they can redirect to the Sign up page from here. They need to include their email address, name and password to sign up. Once that is done, a confirmation link will be sent to their email address. Once the email is confirmed, they can login to the site. Logged in users have the ability to navigate to the Profile page and post a topic / reply in the Boards app.
 
 ### Profile Page
-Logged in users can update their billing details from this page. If they have made any previous bookings, those details are also shown on this page.
+Logged in users can update their billing details from this page. If they have made any previous bookings, those details are also shown on this page. [view](media/tpa_user_profile.jpg)
 
 ### Logout Page
 For users logged in, they can click on the logout button which takes them to this page to confirm that they want to logout. Clicking on the Sign out button logs them out from the site.
@@ -114,6 +114,8 @@ This is available only for admin. Once logged in, the Account dropdown menu cont
 -   Post to blog page - to add a new article to the blog. [view](media/tpa_add_article.jpg)
 
 Separate to these links, edit & delete links show up for admin on all class detail pages and on all blog articles for quick access to these functions.
+-   Class detail Edit/Delete [view](media/tpa_admin_links_2.jpg)
+-   Blog Article Edit/Delete [view](media/tpa_admin_links_1.jpg)
 
 ### Other Features
 -   Scroll to top button added which is a convenience especially when viewing fom tablet or mobile.
@@ -127,14 +129,14 @@ Separate to these links, edit & delete links show up for admin on all class deta
 
 ### Wireframes
 Here are the designs I made for the site:
--   [Home page on desktop](/media/tpa_wf1.jpg)
--   [Classes page on desktop](/media/tpa_wf2.jpg)
--   [Index, Classes and Class Detail pages on smartphones](/media/tpa_wf3.jpg)
--   [Shopping Bag popup, Checkout and Checkout Success pages on smartphones](/media/tpa_wf4.jpg)
--   [Blog, Boards and Profile pages on smartphones](/media/tpa_wf5.jpg)
--   [Board Posts and Board Reply/Add page on tablets](/media/tpa_wf6.jpg)
--   [Add/Edit Class and Sign Out pages on tablets](/media/tpa_wf7.jpg)
--   [DB Entity Relationship Diagram](/media/erd_tpa.jpg)
+-   [Home page on desktop](media/tpa_wf1.jpg)
+-   [Classes page on desktop](media/tpa_wf2.jpg)
+-   [Index, Classes and Class Detail pages on smartphones](media/tpa_wf3.jpg)
+-   [Shopping Bag popup, Checkout and Checkout Success pages on smartphones](media/tpa_wf4.jpg)
+-   [Blog, Boards and Profile pages on smartphones](media/tpa_wf5.jpg)
+-   [Board Posts and Board Reply/Add page on tablets](media/tpa_wf6.jpg)
+-   [Add/Edit Class and Sign Out pages on tablets](media/tpa_wf7.jpg)
+-   [DB Entity Relationship Diagram](media/erd_tpa.jpg)
 
 ## Detailed Features
 
@@ -226,7 +228,7 @@ Here are the designs I made for the site:
 - [Heroku](https://www.heroku.com/)
 
 # Testing
-A detailed description about the testing process and results can be found in [TESTING.md](TESTING.md)
+A detailed and comprehensive description about the testing process and results can be found in [TESTING.md](TESTING.md)
 
 # Deployment
 This site is deployed to heroku and the versioning was done with git and the Repository is hosted on Github.
