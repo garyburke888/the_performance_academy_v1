@@ -2,7 +2,7 @@
 -   All links have been manually tested.
 -   Pylint used for static code analysis throughout build.
 
-All the following tests have been implemented and passed. Where errors occured this has been highlighted.
+All the following tests have been implemented and passed. Where errors occurred this has been highlighted.
 
 # Manual Test Cycles
 
@@ -60,7 +60,7 @@ All the following tests have been implemented and passed. Where errors occured t
     -   Image
     -   Title
     -   Age
-    -   Descripton
+    -   Description
     -   Teacher
     -   Price
     -   Term length
@@ -188,7 +188,7 @@ All the following tests have been implemented and passed. Where errors occured t
 13. Complete order.
 14. Loading animation should be displayed.
 15. Checkout success page should be shown.
-16. If real email address was used, confirmation email should be recieved.
+16. If real email address was used, confirmation email should be received.
 
 ### Checkout registered user
 1.  Open web browser.
@@ -207,7 +207,7 @@ All the following tests have been implemented and passed. Where errors occured t
 14. Complete order.
 15. Loading animation should be displayed.
 16. Checkout success page should be shown.
-17. If real email address was used, confirmation email should be recieved.
+17. If real email address was used, confirmation email should be received.
 
 ### Discount - correct application
 1.  Open web browser.
@@ -228,7 +228,7 @@ All the following tests have been implemented and passed. Where errors occured t
 4.  Click on 'Find a Class'.
 5.  Choose any class by clicking the image.
 6.  Add item to bag.
-7.  Choose another class and add to bag. (make sure you have at least two items in the bag, as the discount applies to bookings of more than one class).
+7.  Choose another class and add to bag. (Make sure you have at least two items in the bag, as the discount applies to bookings of more than one class).
 8.  Grand total should contain a discount of 10%, no matter what classes you have in it.
 
 ## 6. Register
@@ -243,7 +243,7 @@ All the following tests have been implemented and passed. Where errors occured t
 7.  Confirm email.
 8.  Login with credentials.
 
-## 7. Registered Users: Useraccount
+## 7. Registered Users: User account
 1.  Open web browser.
 2.  Open [The Performance Academy Page](https://the-performance-academy.herokuapp.com/).
 3.  Click Account icon.
@@ -364,9 +364,9 @@ As a **site visitor**, I want to...
 -   access the site on any device (smartphone, tablet, desktop), so that I am able to visit the site anytime and anywhere.
     -   The following actual devices / device sizes were used for testing the real-world responsiveness; iPhone 7 Plus (Phone), Dell Inspiron 15 (Laptop), Mac Mini, with acer K222HQL monitor (Desktop). Chrome dev tools were used to test tablet screens. Cross browser testing was also attempted on Chrome, Opera, Edge, Firefox and Safari, site works as expected on all.
 -   have easy navigation, to quickly solve the reason for my visit.
-    -   Main nav is apparant from landing on the site, clear text with dropdowns and Bootstrap info-styled buttons throughout.
+    -   Main nav is apparent from landing on the site, clear text with dropdowns and Bootstrap info-styled buttons throughout.
 -   have information about the brand, to get to know the classes and understand what they entail.
-    -   The homepage explains in very few words what the site is, a school that offers classes. Each class then contins more detailed information. The Blog also provides information to users interested in the school and performing arts in general.
+    -   The homepage explains in very few words what the site is, a school that offers classes. Each class then contains more detailed information. The Blog also provides information to users interested in the school and performing arts in general.
 
 ### Browsing Classes
 As a **site visitor**, I want to...
@@ -374,20 +374,20 @@ As a **site visitor**, I want to...
     -   Class categories are linked directly form the dropdown menu, under classes and class types are actually used as the main nav items themselves.
 -   sort classes to adjust the order according to my needs.
     -   Full sorting capabilities are available on the classes page which includes age (youngest-oldest/oldest-youngest), price (low-high/high-low), name (a-z/z-a) or category (a-z/z-a).
--   be able to to search for specific classes, to quickley find what I need.
-    -   Users can search directly form the main nav on all screen sizes, the search function will search class titles and descriptions.
+-   be able to search for specific classes, to quickly find what I need.
+    -   Users can search directly from the main nav on all screen sizes, the search function will search class titles and descriptions.
 -   access class details, to get more information on the class.
     -   Each class card on the classes page features a link to full 'class details'.
 -   be able to choose a class, to book according to my needs.
-    -   Each class detail page features an 'add to bag' button to allow users to quickley add that item to their bag.
--   read information about performaing arts in general, with a view to exploring new classes / styles.
+    -   Each class detail page features an 'add to bag' button to allow users to quickly add that item to their bag.
+-   read information about performing arts in general, with a view to exploring new classes / styles.
     -   The site features a Blog, which contains relevant articles as posted by the school admin. It also features Boards which are moderated by admin but are for users to chat to each other, about performing arts related topics.
 
 ### Manage Shopping Bag and Make Booking
 As a **site visitor**, I want to...
 -   see all my items in a shopping bag, so that I have an overview of my potential booking.
     -   When a user adds an item to their bag, a side drawer opens up with a summary of contents, which a user can click and it will take them to the full bag page. This page can also be accessed at any time by the bag icon in the main nav.
--   be able to reduce / increase quantity, so that I can order my prefered amount.
+-   be able to reduce / increase quantity, so that I can order my preferred amount.
     -   Each class detail page features a quantity form field which can be adjusted to their needs, this also is a feature of the shopping bag page.
 -   be able to remove an item from my cart, so that I can manage my shopping bag efficiently.
     -   The shopping bag contains a quick 'remove' link which allows this action.
@@ -398,22 +398,22 @@ As a **site visitor**, I want to...
 -   receive a booking confirmation, so that I know my booking was completed.
     -   Booking confirmation emails are sent on checkout success - [checkout/views.py](checkout/views.py)
 
-As a **registered user**, I want to..
+As a **registered user**, I want to...
 -   store my details in my profile, so that I can quickly finish my booking.
-    -   If a user is logged in a 'Save this billing information to my profile' checkbox is provided on the checout form, which will save the users billing information to their profile.
+    -   If a user is logged in a 'Save this billing information to my profile' checkbox is provided on the checkout form, which will save the users billing information to their profile.
 
-### Registration & Useraccount
+### Registration & User account
 As a **site visitor**, I want to...
 -   be able to sign up to the site, so that I can track bookings and have my data prefilled in the order form.
     -   A standard account icon is used in the main nav as a dropdown to allow new users to 'register'. This takes the user to the sign-up page where the must enter a username, password and email address, and then they will be sent an email asking them to confirm their email address.
 
 As a **registered user**, I want to...
--   be able to login, so that I can access my useraccount.
+-   be able to login, so that I can access my user account.
     -   From the account dropdown icon in the main nav, registered users can click the login link and will be taken to the login page and can login using their username and password.
 -   be able to see my order history, so that I know what bookings I've made before.
-    -   A registered users order history is available to view on their profile page.
+    -   A registered user’s order history is available to view on their profile page.
 -   manage my personal details, so that I can quickly update my data if something changes.
-    -   A registered users billing details can be edited and saved on their progfile page.
+    -   A registered users billing details can be edited and saved on their profile page.
 -   post new topics and/or replies to the boards section of the site.
     -   You must be a registered user to create a topic or post a reply on a topic in the 'Boards' app. Users will be asked to login/register if they try to do either without registering/logging in.
 
@@ -494,7 +494,7 @@ All .py files were checked using Flake8 in the terminal. There are still several
     -   iPhone 7 Plus (Phone)
     -   Dell Inspiron 15 (Laptop)
     -   Mac Mini, with acer K222HQL monitor (Desktop)
--   Chrome dev tools were used to review responsivness on multiple devices;
+-   Chrome dev tools were used to review responsiveness on multiple devices;
     -   Moto G4
     -   Galaxy S5
     -   Pixel 2/2 XL
