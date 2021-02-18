@@ -356,6 +356,78 @@ All the following tests have been implemented and passed. Where errors occured t
 12. Should be redirected to that topics page, with all replies visible.
 
 # User Testing
+
+## Testing User Stories from User Experience (UX) Section
+
+### Browsing the Site
+As a **site visitor**, I want to...
+-   access the site on any device (smartphone, tablet, desktop), so that I am able to visit the site anytime and anywhere.
+    -   The following actual devices / device sizes were used for testing the real-world responsiveness; iPhone 7 Plus (Phone), Dell Inspiron 15 (Laptop), Mac Mini, with acer K222HQL monitor (Desktop). Chrome dev tools were used to test tablet screens. Cross browser testing was also attempted on Chrome, Opera, Edge, Firefox and Safari, site works as expected on all.
+-   have easy navigation, to quickly solve the reason for my visit.
+    -   Main nav is apparant from landing on the site, clear text with dropdowns and Bootstrap info-styled buttons throughout.
+-   have information about the brand, to get to know the classes and understand what they entail.
+    -   The homepage explains in very few words what the site is, a school that offers classes. Each class then contins more detailed information. The Blog also provides information to users interested in the school and performing arts in general.
+
+### Browsing Classes
+As a **site visitor**, I want to...
+-   browse classes by category and type, so that I can quickly find what I am looking for.
+    -   Class categories are linked directly form the dropdown menu, under classes and class types are actually used as the main nav items themselves.
+-   sort classes to adjust the order according to my needs.
+    -   Full sorting capabilities are available on the classes page which includes age (youngest-oldest/oldest-youngest), price (low-high/high-low), name (a-z/z-a) or category (a-z/z-a).
+-   be able to to search for specific classes, to quickley find what I need.
+    -   Users can search directly form the main nav on all screen sizes, the search function will search class titles and descriptions.
+-   access class details, to get more information on the class.
+    -   Each class card on the classes page features a link to full 'class details'.
+-   be able to choose a class, to book according to my needs.
+    -   Each class detail page features an 'add to bag' button to allow users to quickley add that item to their bag.
+-   read information about performaing arts in general, with a view to exploring new classes / styles.
+    -   The site features a Blog, which contains relevant articles as posted by the school admin. It also features Boards which are moderated by admin but are for users to chat to each other, about performing arts related topics.
+
+### Manage Shopping Bag and Make Booking
+As a **site visitor**, I want to...
+-   see all my items in a shopping bag, so that I have an overview of my potential booking.
+    -   When a user adds an item to their bag, a side drawer opens up with a summary of contents, which a user can click and it will take them to the full bag page. This page can also be accessed at any time by the bag icon in the main nav.
+-   be able to reduce / increase quantity, so that I can order my prefered amount.
+    -   Each class detail page features a quantity form field which can be adjusted to their needs, this also is a feature of the shopping bag page.
+-   be able to remove an item from my cart, so that I can manage my shopping bag efficiently.
+    -   The shopping bag contains a quick 'remove' link which allows this action.
+-   be able to checkout from the cart view, so that I can quickly finish my booking.
+    -   The shopping bag page has a 'secure checkout' button link which accomplishes this.
+-   be able to pay for a booking by credit card, so that I don't have to deal with an invoice and money transfer.
+    -   This site only accepts credit card payments currently, which is filled out on the checkout page.
+-   receive a booking confirmation, so that I know my booking was completed.
+    -   Booking confirmation emails are sent on checkout success - [checkout/views.py](checkout/views.py)
+
+As a **registered user**, I want to..
+-   store my details in my profile, so that I can quickly finish my booking.
+    -   If a user is logged in a 'Save this billing information to my profile' checkbox is provided on the checout form, which will save the users billing information to their profile.
+
+### Registration & Useraccount
+As a **site visitor**, I want to...
+-   be able to sign up to the site, so that I can track bookings and have my data prefilled in the order form.
+    -   A standard account icon is used in the main nav as a dropdown to allow new users to 'register'. This takes the user to the sign-up page where the must enter a username, password and email address, and then they will be sent an email asking them to confirm their email address.
+
+As a **registered user**, I want to...
+-   be able to login, so that I can access my useraccount.
+    -   From the account dropdown icon in the main nav, registered users can click the login link and will be taken to the login page and can login using their username and password.
+-   be able to see my order history, so that I know what bookings I've made before.
+    -   A registered users order history is available to view on their profile page.
+-   manage my personal details, so that I can quickly update my data if something changes.
+    -   A registered users billing details can be edited and saved on their progfile page.
+-   post new topics and/or replies to the boards section of the site.
+    -   You must be a registered user to create a topic or post a reply on a topic in the 'Boards' app. Users will be asked to login/register if they try to do either without registering/logging in.
+
+### Site Management
+As a **site owner**, I want to...
+-   be able to manage the classes, categories, price and availability, so that I have an overview of all class details.
+    -   The 'account' dropdown menu item will display 'add class' and 'post to blog' links for admin only. Edit & delete links will display on class_detail pages for admin only. Edit & delete links will also display on Blog articles for admin only.
+-   view customer conversations & comments, so that I can quickly update the site when required.
+    -   The 'Boards' app allows users / customers to chat and post about anything - which in turn is moderated and overseen by admin.
+-   create, edit or delete articles to post in the blog, for site users to read.
+    -   Only admin can post new articles to the Blog, which can be done via a link on the 'account' dropdown main nav item. Edit & delete links appear on each blog_detail page for admin only.
+-   create, edit or delete boards, topics and posts in the boards app to maintain proper moderation.
+    -   Admin retain full moderation over the 'Boards' app with regards to having the sole ability to delete topics & posts deemed inappropriate. Creating/editing/deleting boards is done by admin through the Django administration site.
+
 Besides running through the extensive test cycles documented above the URL from the Heroku deployment was shared with friends, family and one currently running performing arts school. As a result, the following features were suggested / requested and could be implemented in future versions;
 -   Ability to update quantity on side drawer bag.
 -   Ability to click to view next/previous blog post from blog detail page.
@@ -381,7 +453,16 @@ In total, 32 passing Django tests were written and implemented - solely for the 
 Webhooks from Stripe are not working, this is despite payments being sent to Stripe without issue. Many attempts to resolve this issue, including contacting Code Institute tutor support were made, to no avail. Error code - 405 (Method Not Allowed) remains.
 
 # Development Issues
-An attempt was made to use [AWS](https://aws.amazon.com/) to serve static and media files and though this started out successfully, data limits were somehow reached after only 3 days of hosting (under the free plan) and so it was decided to roll back and try another method to serve these files. WhiteNoise is used instead.
+-   An attempt was made to use [AWS](https://aws.amazon.com/) to serve static and media files and though this started out successfully, data limits were somehow reached after only 3 days of hosting (under the free plan) and so it was decided to roll back and try another method to serve these files. WhiteNoise is used instead.
+-   Midway through development I had to reset migrations because of a change I wanted to make to the database setup and this was done using the following steps;
+    1.  ```python3 manage.py makemigrations```
+    2.  ```python3 manage.py migrate --fake classes zero (for classes app)```
+    3.  ```python3 manage.py showmigrations```
+    4.  ```Delete everything from migrations folder apart from __init__.py```
+    5.  ```python3 manage.py showmigrations```
+    6.  ```python3 manage.py makemigrations```
+    7.  ```python3 manage.py migrate --fake-initial```
+    8.  ```python3 manage.py showmigrations```
 
 # Code Validators
 
