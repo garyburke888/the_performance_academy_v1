@@ -71,7 +71,7 @@
                                 <div class="ci-container">
                                 {% if class.image %}
                                 <a href="{% url 'class_detail' class.id %}">
-                                    <img class="card-img-top img-fluid rounded-0 ci-image" src="{{ class.image.url }}" alt="{{ class.name }}">
+                                    <img class="card-img-top img-fluid rounded-0 ci-image" src="{% static class.image.url %}" alt="{{ class.name }}">
                                         
                                         <!-- Class image overlay fade -->
                                         <div class="ci-overlay">
