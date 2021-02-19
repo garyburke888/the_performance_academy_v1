@@ -1,6 +1,7 @@
 # Introduction
 -   All links have been manually tested.
 -   Pylint used for static code analysis throughout build.
+-   Deployment of the project caused many problems, mainly with AWS and this is outlined below under the 'Development Issues' heading.
 
 All the following tests have been implemented and passed. Where errors occurred this has been highlighted.
 
@@ -453,7 +454,16 @@ In total, 32 passing Django tests were written and implemented - solely for the 
 Webhooks from Stripe are not working, this is despite payments being sent to Stripe without issue. Many attempts to resolve this issue, including contacting Code Institute tutor support were made, to no avail. Error code - 405 (Method Not Allowed) remains.
 
 # Development Issues
--   An attempt was made to use [AWS](https://aws.amazon.com/) to serve static and media files and though this started out successfully, data limits were somehow reached after only 3 days of hosting (under the free plan) and so it was decided to roll back and try another method to serve these files. WhiteNoise is used instead.
+
+## Deployment
+-   An attempt was made to use [AWS](https://aws.amazon.com/) to store and serve static and media files and though this started out successfully, data limits for the free account were somehow reached after only 3 days of hosting and so I decided to roll back and try another method to serve these files, for fear of the cost involved getting too high.
+-   WhiteNoise is used instead. [WhiteNoise](http://whitenoise.evans.io/en/stable/index.html)
+-   This worked in development mode (with debug on) but as soon as I switched to production mode (debug off), media files were no longer served and had to be copied manually into the new 'staticfiles' folder that was created to run 'collectstatic'.
+-   Whitenoise unfortunately is not suitable for serving user-uploaded “media” files. it only checks for static files at startup and so files added after the app starts won’t be seen - in the case of this project that would mean images connected to admin adding a new class or blog post.
+-   Also, serving user-uploaded files from the same domain as your main application can be a security risk so with these in mind, if this project were to go into 'actual' production, AWS (or similar) would have to be used and the costs involved acquired.
+-   Many edits, commits and pushes were made in trying to solve this problem and keep access to both environments working (mainly from the beginning of February). Eventually I got the site deployed securely and with debug off, but the uploading of images for admin issue still remains.
+
+## Other
 -   Midway through development I had to reset migrations because of a change I wanted to make to the database setup and this was done using the following steps;
     1.  ```python3 manage.py makemigrations```
     2.  ```python3 manage.py migrate --fake classes zero (for classes app)```
