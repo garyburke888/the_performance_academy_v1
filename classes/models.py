@@ -1,4 +1,6 @@
 from django.db import models
+from django.core.validators import MinValueValidator
+from decimal import Decimal
 
 # Create your models here.
 
@@ -49,7 +51,7 @@ class Class(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     is_weekdays = models.BooleanField(default=False, null=True, blank=True)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    price = models.DecimalField(max_digits=6, decimal_places=2, validators=[MinValueValidator(Decimal('0.01'))])
     age = models.ForeignKey(
         'Age', null=True, blank=True, on_delete=models.SET_NULL)
     setting = models.ForeignKey(
