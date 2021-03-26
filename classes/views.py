@@ -135,6 +135,8 @@ def delete_class(request, class_id):
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
+    bag = request.session.get('bag', {})
+    bag.clear()
     a_class = get_object_or_404(Class, pk=class_id)
     a_class.delete()
     messages.success(request, 'Class deleted!')
