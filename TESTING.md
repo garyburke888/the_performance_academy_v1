@@ -3,9 +3,18 @@
 -   Pylint used for static code analysis throughout build.
 -   Deployment of the project caused many problems, mainly with AWS and this is outlined below under the 'Development Issues' heading.
 
-All the following tests have been implemented and passed. Where errors occurred this has been highlighted.
+# Updated testing after project fail, before resubmission
+
+## Criterion 2.4 (if an item is deleted that exists in a user's bag, this causes an internal server error on all routes)
+-   Frontend: This was addressed by adding the python 'clear' method to the bag inside the delete_class function in classes/views.py, ensuring that no class is actually in the bag when admin delete a class.
+-   Backend: This was addressed by changing the has_delete_permission to False on the class model in classes/admin.py to ensure that deleting can only be done through the frontend, which has been fixed as stated above.
+
+## Criterion 4.1 & 4.2 (Internal Server Error when trying to add something having a negative value. so, an admin user can create a product with a negative retail price, and when a user attempts to checkout the same, they are directed to a 500 Internal Error Screen)
+-   This was addressed by adding a MinValueValidator to the class model in classes/models.py ensuring that negative values cannot be added to classes.
 
 # Manual Test Cycles
+
+All the following tests have been implemented and passed. Where errors occurred this has been highlighted.
 
 ## 1. Test Navbar
 
