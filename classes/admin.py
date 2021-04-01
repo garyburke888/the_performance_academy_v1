@@ -18,6 +18,9 @@ class ClassAdmin(admin.ModelAdmin):
 
     ordering = ('sku',)
 
+    def has_delete_permission(self, request, obj=None):
+        return False
+
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
